@@ -1,8 +1,8 @@
 <?php
 
-namespace Sfneal\PhpPackageBoilerplate;
+namespace Sfneal\Filters;
 
-class PhpPackageBoilerplate
+class Filters
 {
     // Build your next great package.
 }
