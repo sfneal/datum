@@ -1,8 +1,6 @@
 <?php
 
-
 namespace Sfneal\Queries;
-
 
 use Sfneal\Queries\Interfaces\DynamicQuery;
 use Sfneal\Queries\Traits\ApplyFilter;
@@ -13,14 +11,14 @@ abstract class AbstractQueryWithFilter extends AbstractQuery implements DynamicQ
     use ApplyFilter;
 
     /**
-     * Array of attribute/form input name keys and Filter class values
+     * Array of attribute/form input name keys and Filter class values.
      *
      * @var array
      */
     public $attribute_filters;
 
     /**
-     * Filter values to be passed to Filer classes
+     * Filter values to be passed to Filer classes.
      *
      * @var array
      */

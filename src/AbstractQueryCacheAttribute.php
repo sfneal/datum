@@ -1,8 +1,6 @@
 <?php
 
-
 namespace Sfneal\Queries;
-
 
 use Illuminate\Database\Eloquent\Model;
 use Sfneal\Caching\Traits\Cacheable;
@@ -10,26 +8,26 @@ use Sfneal\Caching\Traits\Cacheable;
 abstract class AbstractQueryCacheAttribute extends AbstractQuery
 {
     /**
-     * Inherit cache methods
+     * Inherit cache methods.
      */
     use Cacheable;
 
     /**
-     * Target Model
+     * Target Model.
      *
      * @var Model
      */
     protected $model;
 
     /**
-     * Model's attribute to cache
+     * Model's attribute to cache.
      *
      * @var string
      */
     protected $attribute;
 
     /**
-     * Model ID
+     * Model ID.
      *
      * @var int
      */
@@ -46,7 +44,7 @@ abstract class AbstractQueryCacheAttribute extends AbstractQuery
     }
 
     /**
-     * Retrieve a Service's title
+     * Retrieve a Service's title.
      *
      * @return string
      */
@@ -56,13 +54,14 @@ abstract class AbstractQueryCacheAttribute extends AbstractQuery
     }
 
     /**
-     * Key to use for cache store
+     * Key to use for cache store.
      *
      * @return string
      */
     public function cacheKey(): string
     {
         $table = (new $this->model)->getTable();
+
         return "{$table}:{$this->model_key}#{$this->attribute}";
     }
 }

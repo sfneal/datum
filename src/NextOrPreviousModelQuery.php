@@ -1,11 +1,10 @@
 <?php
 
-
 namespace Sfneal\Queries;
 
 use Illuminate\Database\Eloquent\Model;
-use Sfneal\Models\AbstractModel;
 use Sfneal\Caching\Traits\Cacheable;
+use Sfneal\Models\AbstractModel;
 
 class NextOrPreviousModelQuery extends AbstractQuery
 {
@@ -47,7 +46,7 @@ class NextOrPreviousModelQuery extends AbstractQuery
     }
 
     /**
-     * Retrieve the 'next' or 'previous' Model
+     * Retrieve the 'next' or 'previous' Model.
      *
      * @return Model|null
      */
@@ -67,34 +66,38 @@ class NextOrPreviousModelQuery extends AbstractQuery
     }
 
     /**
-     * Set the returned model to 'next'
+     * Set the returned model to 'next'.
      *
      * @return $this
      */
-    public function next(): self {
+    public function next(): self
+    {
         $this->next = true;
         $this->cache_key_string = 'next';
+
         return $this;
     }
 
     /**
-     * Set the returned model to 'previous'
+     * Set the returned model to 'previous'.
      *
      * @return $this
      */
-    public function previous(): self {
+    public function previous(): self
+    {
         $this->next = false;
         $this->cache_key_string = 'previous';
+
         return $this;
     }
 
     /**
-     * Retrieve the Queries Cache Key
+     * Retrieve the Queries Cache Key.
      *
      * @return string
      */
     public function cacheKey(): string
     {
-        return $this->model::getTableName() . ":{$this->cache_key_string}:#{$this->model_id}";
+        return $this->model::getTableName().":{$this->cache_key_string}:#{$this->model_id}";
     }
 }
