@@ -1,6 +1,5 @@
 <?php
 
-
 namespace Sfneal\Queries\Interfaces;
 
 interface DynamicQuery
@@ -14,7 +13,7 @@ interface DynamicQuery
     public function __construct(array $filters);
 
     /**
-     * Execute a DB query using filter parameters
+     * Execute a DB query using filter parameters.
      */
     public function execute();
 }

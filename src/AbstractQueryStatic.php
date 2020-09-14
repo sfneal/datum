@@ -3,11 +3,9 @@
 namespace Sfneal\Queries;
 
 /**
- * Class QueryStatic
- * @package Sfneal\Queries
+ * Class QueryStatic.
  * @method static execute
  */
 abstract class AbstractQueryStatic
 {
-
 }

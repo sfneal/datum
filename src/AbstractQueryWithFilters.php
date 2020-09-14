@@ -1,26 +1,24 @@
 <?php
 
-
 namespace Sfneal\Queries;
 
-
+use Illuminate\Database\Eloquent\Builder;
 use Sfneal\Queries\Interfaces\DynamicQuery;
 use Sfneal\Queries\Traits\ApplyFilter;
-use Illuminate\Database\Eloquent\Builder;
 
 abstract class AbstractQueryWithFilters extends AbstractQuery implements DynamicQuery
 {
     use ApplyFilter;
 
     /**
-     * Array of attribute/form input name keys and Filter class values
+     * Array of attribute/form input name keys and Filter class values.
      *
      * @var array
      */
     public $attribute_filters;
 
     /**
-     * Filter values to be passed to Filer classes
+     * Filter values to be passed to Filer classes.
      *
      * @var array
      */
@@ -38,7 +36,7 @@ abstract class AbstractQueryWithFilters extends AbstractQuery implements Dynamic
     }
 
     /**
-     * Apply Filter decorators to the query if both the parameter is given and the Filter class exists
+     * Apply Filter decorators to the query if both the parameter is given and the Filter class exists.
      *
      * @param Builder $builder
      * @param array|null $filters
@@ -56,21 +54,22 @@ abstract class AbstractQueryWithFilters extends AbstractQuery implements Dynamic
                 $query = self::applyFilterToQuery($query, $filterName, $value);
             }
         });
+
         return $builder;
     }
 
     /**
-     * Parse filters and remove all keys that are not found in the declared attributes_filters
+     * Parse filters and remove all keys that are not found in the declared attributes_filters.
      *
      * @param array $filters filters passed from search form
      * @return array
      */
-    private function filterFilters(array $filters): array {
-        return array_filter($filters, function($value, $filter) {
+    private function filterFilters(array $filters): array
+    {
+        return array_filter($filters, function ($value, $filter) {
 
             // Return true if the filter is a filterable attribute
-            return in_array($filter, array_keys($this->attribute_filters)) && !is_null($value);
-
-        },ARRAY_FILTER_USE_BOTH);
+            return in_array($filter, array_keys($this->attribute_filters)) && ! is_null($value);
+        }, ARRAY_FILTER_USE_BOTH);
     }
 }
