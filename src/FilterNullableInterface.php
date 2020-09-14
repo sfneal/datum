@@ -13,5 +13,5 @@ interface FilterNullableInterface
      * @param null $value
      * @return Builder $query
      */
-    public static function apply(Builder $query, $value=null);
+    public static function apply(Builder $query, $value = null);
 }

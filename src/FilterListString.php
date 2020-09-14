@@ -1,8 +1,6 @@
 <?php
 
-
 namespace Sfneal\Filters;
-
 
 use Illuminate\Database\Eloquent\Builder;
 
@@ -61,7 +59,7 @@ abstract class FilterListString
     }
 
     /**
-     * Add a where clause that searches for a single value
+     * Add a where clause that searches for a single value.
      *
      * @param string $id
      * @return Builder $query
@@ -69,11 +67,12 @@ abstract class FilterListString
     protected function stringValueClause($id)
     {
         $this->query->where($this->column, '=', $id);
+
         return $this->query;
     }
 
     /**
-     * Add a where clause that searches for an array of values
+     * Add a where clause that searches for an array of values.
      *
      * @param array $ids
      * @return Builder $query;
@@ -81,11 +80,12 @@ abstract class FilterListString
     protected function arrayValueClause(array $ids)
     {
         $this->query->whereIn($this->column, $ids);
+
         return $this->query;
     }
 
     /**
-     * Set the Query Builder property
+     * Set the Query Builder property.
      *
      * @param Builder $query
      */
