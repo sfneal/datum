@@ -18,9 +18,9 @@
     "require": {
         "php": "^7.2",
         "illuminate/http": "*",
-        "sfneal/caching": "*",
-        "sfneal/filters": "^0.2.0",
-        "sfneal/models": "^0.2.0"
+        "sfneal/caching": "^0.2",
+        "sfneal/filters": "^0.2",
+        "sfneal/models": "^0.2"
     },
     "require-dev": {
         "phpunit/phpunit": "^7.0"
