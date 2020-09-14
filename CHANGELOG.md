@@ -12,3 +12,7 @@ All notable changes to `queries` will be documented in this file
 
 ## 0.2.1 - 2020-09-14
 - fix min sfneal/filters composer package version
+
+
+## 0.2.2 - 2020-09-14
+- fix min sfneal/caching composer package version
