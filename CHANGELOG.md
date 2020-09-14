@@ -8,3 +8,7 @@ All notable changes to `queries` will be documented in this file
 
 ## 0.2.0 - 2020-09-14
 - add support for Laravel 8
+
+
+## 0.2.1 - 2020-09-14
+- fix min sfneal/filters composer package version

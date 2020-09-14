@@ -19,7 +19,7 @@
         "php": "^7.2",
         "illuminate/http": "*",
         "sfneal/caching": "*",
-        "sfneal/filters": "*",
+        "sfneal/filters": "^0.2.0",
         "sfneal/models": "^0.2.0"
     },
     "require-dev": {
