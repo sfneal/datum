@@ -20,3 +20,7 @@ All notable changes to `queries` will be documented in this file
 
 ## 0.2.3 - 2020-09-14
 - fix min sfneal/caching composer package version
+
+
+## 0.3.0 - 2020-10-07
+- add php 7.0-7.1 backwards compatibility
