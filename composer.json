@@ -16,11 +16,11 @@
         }
     ],
     "require": {
-        "php": "^7.2",
-        "illuminate/database": "*"
+        "php": ">=7.0",
+        "illuminate/database": ">=6.0"
     },
     "require-dev": {
-        "phpunit/phpunit": "^7.0"
+        "phpunit/phpunit": ">=6.0"
     },
     "autoload": {
         "psr-4": {
