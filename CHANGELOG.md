@@ -28,3 +28,7 @@ All notable changes to `queries` will be documented in this file
 
 ## 0.3.1 - 2020-12-02
 - fix min phpunit version
+
+
+## 0.4.0 - 2020-12-04
+- add support for php8
