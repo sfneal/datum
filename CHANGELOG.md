@@ -12,3 +12,7 @@ All notable changes to `filters` will be documented in this file
 
 ## 0.3.0 - 2020-10-07
 - add php 7.0-7.1 backwards compatibility
+
+
+## 0.4.0 - 2020-12-11
+- add php8 support
