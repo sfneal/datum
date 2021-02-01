@@ -13,7 +13,7 @@ abstract class FilterListString
     protected $query;
 
     /**
-     * todo: find this dynamically
+     * todo: find this dynamically.
      * @var string Primary key column
      */
     protected $column = 'id';
