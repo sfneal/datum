@@ -16,3 +16,8 @@ All notable changes to `filters` will be documented in this file
 
 ## 0.4.0 - 2020-12-11
 - add php8 support
+
+
+## 0.5.0 - 2021-02-01
+- cut support for php7.0
+- add sfneal/string-helpers to composer requirements
