@@ -3,6 +3,7 @@
 namespace Sfneal\Filters;
 
 use Illuminate\Database\Eloquent\Builder;
+use Sfneal\Helpers\Strings\StringHelpers;
 
 abstract class FilterListString
 {
@@ -46,7 +47,7 @@ abstract class FilterListString
 
         // Determine if the the ID's are a comma or space separated list
         // if true, add where clause looking for an array of ID's
-        if ($ids = isListString($trimmed)) {
+        if ($ids = (new StringHelpers($trimmed))->isListString()) {
             $this->query = $this->arrayValueClause($ids);
         }
 
