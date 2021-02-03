@@ -65,6 +65,14 @@ class TestCase extends OrchestraTestCase
                 'state' => 'MA',
                 'zip' => '02038',
             ],
+            [
+                'name_first' => 'Tom',
+                'name_last' => 'Brady',
+                'address' => '123 Main Street',
+                'city' => 'Brookline',
+                'state' => 'MA',
+                'zip' => '02445',
+            ],
         ];
     }
 
