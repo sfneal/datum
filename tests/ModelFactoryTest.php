@@ -19,7 +19,7 @@ class ModelFactoryTest extends TestCase
     public function setUp(): void
     {
         parent::setUp();
-        $this->model = $this->models->random();
+        $this->model = People::query()->get()->shuffle()->first();
     }
 
     /** @test */
