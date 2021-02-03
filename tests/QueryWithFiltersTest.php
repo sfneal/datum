@@ -4,7 +4,6 @@
 namespace Sfneal\Datum\Tests;
 
 
-use Sfneal\Datum\Tests\Models\People;
 use Sfneal\Datum\Tests\Queries\PeopleQueryWithFilters;
 
 class QueryWithFiltersTest extends TestCase
