@@ -4,7 +4,6 @@ namespace Sfneal\Datum\Tests\Queries;
 
 use Illuminate\Database\Eloquent\Builder;
 use Sfneal\Datum\Tests\Filters\CityFilter;
-use Sfneal\Datum\Tests\Filters\CityFilterDynamic;
 use Sfneal\Datum\Tests\Models\People;
 use Sfneal\Queries\AbstractQueryWithFilters;
 
