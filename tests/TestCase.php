@@ -1,11 +1,11 @@
 <?php
 
-namespace Sfneal\Filters\Tests;
+namespace Sfneal\Datum\Tests;
 
 use Illuminate\Foundation\Testing\RefreshDatabase;
 use Orchestra\Testbench\TestCase as OrchestraTestCase;
-use Sfneal\Filters\Tests\Models\People;
-use Sfneal\Filters\Tests\Providers\TestingServiceProvider;
+use Sfneal\Datum\Tests\Models\People;
+use Sfneal\Datum\Tests\Providers\TestingServiceProvider;
 
 class TestCase extends OrchestraTestCase
 {

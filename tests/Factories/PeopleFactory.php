@@ -1,9 +1,9 @@
 <?php
 
-namespace Sfneal\Filters\Tests\Factories;
+namespace Sfneal\Datum\Tests\Factories;
 
 use Illuminate\Database\Eloquent\Factories\Factory;
-use Sfneal\Filters\Tests\Models\People;
+use Sfneal\Datum\Tests\Models\People;
 
 class PeopleFactory extends Factory
 {

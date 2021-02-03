@@ -1,6 +1,6 @@
 <?php
 
-namespace Sfneal\Filters\Tests\Filters;
+namespace Sfneal\Datum\Tests\Filters;
 
 use Illuminate\Database\Eloquent\Builder;
 use Sfneal\Filters\FilterListString;

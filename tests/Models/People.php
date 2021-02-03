@@ -1,10 +1,10 @@
 <?php
 
-namespace Sfneal\Filters\Tests\Models;
+namespace Sfneal\Datum\Tests\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
-use Sfneal\Filters\Tests\Factories\PeopleFactory;
+use Sfneal\Datum\Tests\Factories\PeopleFactory;
 
 class People extends Model
 {

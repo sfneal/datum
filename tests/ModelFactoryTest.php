@@ -1,8 +1,8 @@
 <?php
 
-namespace Sfneal\Filters\Tests;
+namespace Sfneal\Datum\Tests;
 
-use Sfneal\Filters\Tests\Models\People;
+use Sfneal\Datum\Tests\Models\People;
 
 class ModelFactoryTest extends TestCase
 {

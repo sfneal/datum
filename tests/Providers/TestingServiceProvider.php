@@ -1,6 +1,6 @@
 <?php
 
-namespace Sfneal\Filters\Tests\Providers;
+namespace Sfneal\Datum\Tests\Providers;
 
 use Illuminate\Support\ServiceProvider;
 
