@@ -1,19 +1,20 @@
-# Filters
+# Datum
 
-[![Packagist PHP support](https://img.shields.io/packagist/php-v/sfneal/filters)](https://packagist.org/packages/sfneal/filters)
-[![Latest Version on Packagist](https://img.shields.io/packagist/v/sfneal/filters.svg?style=flat-square)](https://packagist.org/packages/sfneal/filters)
-[![Build Status](https://travis-ci.com/sfneal/filters.svg?branch=master&style=flat-square)](https://travis-ci.com/sfneal/filters)
-[![Quality Score](https://img.shields.io/scrutinizer/g/sfneal/filters.svg?style=flat-square)](https://scrutinizer-ci.com/g/sfneal/filters)
-[![Total Downloads](https://img.shields.io/packagist/dt/sfneal/filters.svg?style=flat-square)](https://packagist.org/packages/sfneal/filters)
+[![Packagist PHP support](https://img.shields.io/packagist/php-v/sfneal/datum)](https://packagist.org/packages/sfneal/datum)
+[![Latest Version on Packagist](https://img.shields.io/packagist/v/sfneal/datum.svg?style=flat-square)](https://packagist.org/packages/sfneal/datum)
+[![Build Status](https://travis-ci.com/sfneal/datum.svg?branch=master&style=flat-square)](https://travis-ci.com/sfneal/datum)
+[![StyleCI](https://github.styleci.io/repos/335684072/shield?branch=master)](https://github.styleci.io/repos/335684072?branch=master)
+[![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/sfneal/datum/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/sfneal/datum/?branch=master)
+[![Total Downloads](https://img.shields.io/packagist/dt/sfneal/datum.svg?style=flat-square)](https://packagist.org/packages/sfneal/datum)
 
-Custom filters that can be applied to Eloquent Queries
+Construct reusable & cacheable Eloquent queries with custom filters.
 
 ## Installation
 
 You can install the package via composer:
 
 ```bash
-composer require sfneal/filters
+composer require sfneal/datum
 ```
 
 ## Usage
@@ -22,13 +23,13 @@ composer require sfneal/filters
 // Usage description here
 ```
 
-### Testing
+## Testing
 
 ``` bash
 composer test
 ```
 
-### Changelog
+## Changelog
 
 Please see [CHANGELOG](CHANGELOG.md) for more information what has changed recently.
 
@@ -36,7 +37,7 @@ Please see [CHANGELOG](CHANGELOG.md) for more information what has changed recen
 
 Please see [CONTRIBUTING](CONTRIBUTING.md) for details.
 
-### Security
+## Security
 
 If you discover any security related issues, please email stephen.neal14@gmail.com instead of using the issue tracker.
 
