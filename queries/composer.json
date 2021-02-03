@@ -3,7 +3,7 @@
     "description": "Construct reusable & cacheable Eloquent queries with custom filters",
     "keywords": [
         "sfneal",
-        "queries"
+      ""
     ],
     "homepage": "https://github.com/sfneal/queries",
     "license": "MIT",
