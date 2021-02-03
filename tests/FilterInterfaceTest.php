@@ -28,4 +28,27 @@ class FilterInterfaceTest extends TestCase
 
         $this->assertEquals(3, $people->count());
     }
+
+    public function test_name_last_filter_single()
+    {
+        $filters = [
+            'name_last' => 'Neal',
+        ];
+        $people = (new PeopleQueryWithFilters($filters))->execute();
+
+        $this->assertEquals(2, $people->count());
+    }
+
+    public function test_name_last_filter_array()
+    {
+        $filters = [
+            'name_last' => [
+                'Neal',
+                'Brady'
+            ],
+        ];
+        $people = (new PeopleQueryWithFilters($filters))->execute();
+
+        $this->assertEquals(3, $people->count());
+    }
 }
