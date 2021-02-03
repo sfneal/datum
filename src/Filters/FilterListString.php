@@ -54,7 +54,7 @@ abstract class FilterListString
 
         // Add where clause searching for a single Plan ID
         else {
-            $this->query = $this->stringValueClause(intval($trimmed));
+            $this->query = $this->stringValueClause($trimmed);
         }
 
         return $this->query;
