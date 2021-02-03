@@ -67,7 +67,7 @@ abstract class AbstractQueryCacheAttribute extends AbstractQuery
     }
 
     /**
-     * Determine if the query is currently cached
+     * Determine if the query is currently cached.
      *
      * @return bool
      */
