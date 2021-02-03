@@ -4,7 +4,7 @@ namespace Sfneal\Datum\Tests;
 
 use Sfneal\Datum\Tests\Queries\PeopleQueryWithFilters;
 
-class QueryWithFiltersTest extends TestCase
+class FilterInterfaceTest extends TestCase
 {
     public function test_city_filter_single()
     {
