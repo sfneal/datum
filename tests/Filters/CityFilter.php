@@ -16,6 +16,8 @@ class CityFilter implements FilterInterface
      */
     public static function apply(Builder $query, $value)
     {
-        return (new CityFilterDynamic())->apply($query, $value);
+        $query->whereIn('city', (array) $value);
+
+        return $query;
     }
 }
