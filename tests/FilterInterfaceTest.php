@@ -2,10 +2,18 @@
 
 namespace Sfneal\Datum\Tests;
 
+use Sfneal\Datum\Tests\Filters\CityFilter;
+use Sfneal\Datum\Tests\Filters\NameLastFilter;
 use Sfneal\Datum\Tests\Queries\PeopleQueryWithFilters;
 
 class FilterInterfaceTest extends TestCase
 {
+    public function test_apply_methods_exists()
+    {
+        $this->assertTrue(method_exists(CityFilter::class, 'apply'));
+        $this->assertTrue(method_exists(NameLastFilter::class, 'apply'));
+    }
+
     public function test_city_filter_single()
     {
         $filters = [
