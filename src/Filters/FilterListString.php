@@ -46,14 +46,9 @@ abstract class FilterListString
         // Remove whitespace from the value
         $trimmed = trim($value);
 
-        // Check if the $value is an array of values
-        if (is_array($value)) {
-            $this->query = $this->arrayValueClause($value);
-        }
-
         // Determine if the the ID's are a comma or space separated list
         // if true, add where clause looking for an array of ID's
-        elseif ($ids = (new StringHelpers($trimmed))->isListString()) {
+        if ($ids = (new StringHelpers($trimmed))->isListString()) {
             $this->query = $this->arrayValueClause($ids);
         }
 
