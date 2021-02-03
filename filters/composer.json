@@ -1,0 +1,45 @@
+{
+    "name": "sfneal/filters",
+    "description": "Custom filters that can be applied to Eloquent Queries",
+    "keywords": [
+        "sfneal",
+      ""
+    ],
+    "homepage": "https://github.com/sfneal/filters",
+    "license": "MIT",
+    "type": "library",
+    "authors": [
+        {
+            "name": "Stephen Neal",
+            "email": "stephen.neal14@gmail.com",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": ">=7.3",
+        "illuminate/database": ">=8.2",
+        "sfneal/string-helpers": ">=1.0"
+    },
+    "require-dev": {
+        "orchestra/testbench": ">=6.7",
+        "phpunit/phpunit": ">=7.5.20"
+    },
+    "autoload": {
+        "psr-4": {
+            "Sfneal\\Filters\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Sfneal\\Filters\\Tests\\": "tests"
+        }
+    },
+    "scripts": {
+        "test": "vendor/bin/phpunit",
+        "test-coverage": "vendor/bin/phpunit --coverage-html coverage",
+        "update-test": "composer --prefer-stable update && composer test && composer update --prefer-lowest && composer test && composer update"
+    },
+    "config": {
+        "sort-packages": true
+    }
+}
