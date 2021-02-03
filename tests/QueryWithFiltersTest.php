@@ -11,11 +11,11 @@ class QueryWithFiltersTest extends TestCase
         $filters = [
             'name_last' => [
                 'Neal',
-                'Brady'
+                'Brady',
             ],
             'city' => [
                 'Brookline',
-                'Boston'
+                'Boston',
             ],
         ];
 

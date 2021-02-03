@@ -28,7 +28,7 @@ class FilterInterfaceTest extends TestCase
         $filters = [
             'city' => [
                 'Franklin',
-                'Brookline'
+                'Brookline',
             ],
         ];
 
@@ -49,7 +49,7 @@ class FilterInterfaceTest extends TestCase
         $filters = [
             'name_last' => [
                 'Neal',
-                'Brady'
+                'Brady',
             ],
         ];
 

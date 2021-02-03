@@ -1,8 +1,6 @@
 <?php
 
-
 namespace Sfneal\Datum\Tests\Queries;
-
 
 use Illuminate\Database\Eloquent\Model;
 use Sfneal\Datum\Tests\Models\People;

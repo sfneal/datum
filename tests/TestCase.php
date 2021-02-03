@@ -19,7 +19,7 @@ class TestCase extends OrchestraTestCase
         return [
             RedisHelpersServiceProvider::class,
             RedisMockServiceProvider::class,
-            TestingServiceProvider::class
+            TestingServiceProvider::class,
         ];
     }
 
@@ -58,7 +58,6 @@ class TestCase extends OrchestraTestCase
         RedisCache::flush();
         parent::tearDown();
     }
-
 
     /**
      * Add custom Factories to the model Collection.
