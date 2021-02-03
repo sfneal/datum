@@ -62,6 +62,6 @@ abstract class AbstractQueryCacheAttribute extends AbstractQuery
     {
         $table = (new $this->model)->getTable();
 
-        return "{$table}:{$this->model_key}#{$this->attribute}";
+        return "{$table}:{$this->model_key}:{$this->attribute}";
     }
 }
