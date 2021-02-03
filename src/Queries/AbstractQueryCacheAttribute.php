@@ -4,6 +4,7 @@ namespace Sfneal\Queries;
 
 use Illuminate\Database\Eloquent\Model;
 use Sfneal\Caching\Traits\Cacheable;
+use Sfneal\Helpers\Redis\RedisCache;
 
 abstract class AbstractQueryCacheAttribute extends AbstractQuery
 {
@@ -63,5 +64,15 @@ abstract class AbstractQueryCacheAttribute extends AbstractQuery
         $table = (new $this->model)->getTable();
 
         return "{$table}:{$this->model_key}:{$this->attribute}";
+    }
+
+    /**
+     * Determine if the query is currently cached
+     *
+     * @return bool
+     */
+    public function isCached(): bool
+    {
+        return RedisCache::exists($this->cacheKey());
     }
 }

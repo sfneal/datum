@@ -4,7 +4,6 @@ namespace Sfneal\Datum\Tests;
 
 use Sfneal\Datum\Tests\Models\People;
 use Sfneal\Datum\Tests\Queries\PeopleEmailQuery;
-use Sfneal\Helpers\Redis\RedisCache;
 
 class QueryCacheAttributeTest extends TestCase
 {
@@ -42,6 +41,6 @@ class QueryCacheAttributeTest extends TestCase
         $query = (new PeopleEmailQuery($this->id));
         $result = $query->fetch();
 
-        $this->assertTrue(RedisCache::exists($query->cacheKey()));
+        $this->assertTrue($query->isCached());
     }
 }
