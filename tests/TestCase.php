@@ -3,9 +3,12 @@
 namespace Sfneal\Datum\Tests;
 
 use Illuminate\Foundation\Testing\RefreshDatabase;
+use Lunaweb\RedisMock\Providers\RedisMockServiceProvider;
 use Orchestra\Testbench\TestCase as OrchestraTestCase;
 use Sfneal\Datum\Tests\Models\People;
 use Sfneal\Datum\Tests\Providers\TestingServiceProvider;
+use Sfneal\Helpers\Redis\Providers\RedisHelpersServiceProvider;
+use Sfneal\Helpers\Redis\RedisCache;
 
 class TestCase extends OrchestraTestCase
 {
@@ -13,7 +16,11 @@ class TestCase extends OrchestraTestCase
 
     protected function getPackageProviders($app)
     {
-        return TestingServiceProvider::class;
+        return [
+            RedisHelpersServiceProvider::class,
+            RedisMockServiceProvider::class,
+            TestingServiceProvider::class
+        ];
     }
 
     protected function getEnvironmentSetUp($app)
@@ -40,6 +47,18 @@ class TestCase extends OrchestraTestCase
         // Add custom factories
         $this->addCustomFactories();
     }
+
+    /**
+     * Clean up the testing environment before the next test.
+     *
+     * @return void
+     */
+    protected function tearDown(): void
+    {
+        RedisCache::flush();
+        parent::tearDown();
+    }
+
 
     /**
      * Add custom Factories to the model Collection.
