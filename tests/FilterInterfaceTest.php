@@ -11,9 +11,8 @@ class FilterInterfaceTest extends TestCase
         $filters = [
             'city' => 'Franklin',
         ];
-        $people = (new PeopleQueryWithFilters($filters))->execute();
 
-        $this->assertEquals(2, $people->count());
+        $this->assertEquals(2, (new PeopleQueryWithFilters($filters))->execute()->count());
     }
 
     public function test_city_filter_array()
@@ -24,9 +23,8 @@ class FilterInterfaceTest extends TestCase
                 'Brookline'
             ],
         ];
-        $people = (new PeopleQueryWithFilters($filters))->execute();
 
-        $this->assertEquals(3, $people->count());
+        $this->assertEquals(3, (new PeopleQueryWithFilters($filters))->execute()->count());
     }
 
     public function test_name_last_filter_single()
@@ -34,9 +32,8 @@ class FilterInterfaceTest extends TestCase
         $filters = [
             'name_last' => 'Neal',
         ];
-        $people = (new PeopleQueryWithFilters($filters))->execute();
 
-        $this->assertEquals(2, $people->count());
+        $this->assertEquals(2, (new PeopleQueryWithFilters($filters))->execute()->count());
     }
 
     public function test_name_last_filter_array()
@@ -47,8 +44,7 @@ class FilterInterfaceTest extends TestCase
                 'Brady'
             ],
         ];
-        $people = (new PeopleQueryWithFilters($filters))->execute();
 
-        $this->assertEquals(3, $people->count());
+        $this->assertEquals(3, (new PeopleQueryWithFilters($filters))->execute()->count());
     }
 }
