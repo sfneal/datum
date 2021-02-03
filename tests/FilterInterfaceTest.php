@@ -47,20 +47,4 @@ class FilterInterfaceTest extends TestCase
 
         $this->assertEquals(3, (new PeopleQueryWithFilters($filters))->execute()->count());
     }
-
-    public function test_multiple_filters()
-    {
-        $filters = [
-            'name_last' => [
-                'Neal',
-                'Brady'
-            ],
-            'city' => [
-                'Brookline',
-                'Boston'
-            ],
-        ];
-
-        $this->assertEquals(1, (new PeopleQueryWithFilters($filters))->execute()->count());
-    }
 }
