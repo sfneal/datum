@@ -1,8 +1,6 @@
 <?php
 
-
 namespace Sfneal\Datum\Tests;
-
 
 use Sfneal\Datum\Tests\Queries\PeopleQueryWithFilters;
 
@@ -11,7 +9,7 @@ class QueryWithFiltersTest extends TestCase
     public function test_city_filter()
     {
         $filters = [
-            'city' => 'Franklin'
+            'city' => 'Franklin',
         ];
         $people = (new PeopleQueryWithFilters($filters))->execute();
 
