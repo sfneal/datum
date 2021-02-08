@@ -14,7 +14,7 @@ class CityFilter implements FilterInterface
      * @param mixed $value
      * @return Builder $query
      */
-    public function apply(Builder $query, $value = null)
+    public function apply(Builder $query, $value)
     {
         $query->whereIn('city', (array) $value);
 

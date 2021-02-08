@@ -21,5 +21,4 @@ All notable changes to `datum` will be documented in this file
 
 
 ## 0.4.0 - 2021-02-08
-- refactor FilterInterface to use the same params as FilterNullableInterface
 - cut FilterNullableInterface
