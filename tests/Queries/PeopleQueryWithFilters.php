@@ -19,7 +19,7 @@ class PeopleQueryWithFilters extends AbstractQueryWithFilters
     public $attribute_filters = [
         'city' => CityFilter::class,
         'name_last' => NameLastFilter::class,
-        'name_first' => NameFirstFilter::class
+        'name_first' => NameFirstFilter::class,
     ];
 
     /**
