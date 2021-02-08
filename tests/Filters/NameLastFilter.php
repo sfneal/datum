@@ -14,7 +14,7 @@ class NameLastFilter implements FilterInterface
      * @param mixed $value
      * @return Builder $query
      */
-    public static function apply(Builder $query, $value)
+    public function apply(Builder $query, $value)
     {
         $query->whereIn('name_last', (array) $value);
 
