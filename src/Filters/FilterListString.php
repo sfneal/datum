@@ -44,17 +44,19 @@ abstract class FilterListString
         $this->setQuery($query);
 
         // Remove whitespace from the value
-        $trimmed = trim($value);
+        if (is_string($value)) {
+            $value = trim($value);
+        }
 
         // Determine if the the ID's are a comma or space separated list
         // if true, add where clause looking for an array of ID's
-        if ($ids = (new StringHelpers($trimmed))->isListString()) {
+        if (is_string($value) && $ids = (new StringHelpers($value))->isListString()) {
             $this->query = $this->arrayValueClause($ids);
         }
 
         // Add where clause searching for a single Plan ID
         else {
-            $this->query = $this->stringValueClause($trimmed);
+            $this->query = $this->stringValueClause($value);
         }
 
         return $this->query;
