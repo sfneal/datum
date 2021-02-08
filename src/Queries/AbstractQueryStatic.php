@@ -8,4 +8,5 @@ namespace Sfneal\Queries;
  */
 abstract class AbstractQueryStatic
 {
+    // todo: remove this
 }
