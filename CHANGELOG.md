@@ -18,3 +18,8 @@ All notable changes to `datum` will be documented in this file
 - refactor FilterListString's default handling of 'list string'
 - refactor FilterInterface::apply method to no longer be static
 - fix FilterListString::stringValueClause() method to type cast strings to arrays
+
+
+## 0.4.0 - 2021-02-08
+- refactor FilterInterface to use the same params as FilterNullableInterface
+- cut FilterNullableInterface

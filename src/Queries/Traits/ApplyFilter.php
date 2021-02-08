@@ -4,7 +4,6 @@ namespace Sfneal\Queries\Traits;
 
 use Illuminate\Database\Eloquent\Builder;
 use Sfneal\Filters\FilterInterface;
-use Sfneal\Filters\FilterNullableInterface;
 
 trait ApplyFilter
 {
@@ -14,7 +13,7 @@ trait ApplyFilter
      * @param Builder $query
      * @param string $filterName
      * @param mixed $filterValue
-     * @param FilterInterface|FilterNullableInterface $decorator
+     * @param FilterInterface $decorator
      * @return Builder
      */
     public function applyFilterToQuery(Builder $query, string $filterName, $filterValue = null, $decorator = null)
