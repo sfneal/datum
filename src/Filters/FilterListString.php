@@ -13,8 +13,7 @@ abstract class FilterListString implements FilterInterface
     protected $query;
 
     /**
-     * todo: find this dynamically.
-     * @var string Primary key column
+     * @var string
      */
     protected $column = 'id';
 
@@ -70,7 +69,7 @@ abstract class FilterListString implements FilterInterface
      */
     protected function stringValueClause($id)
     {
-        $this->query->where($this->column, '=', $id);
+        $this->query->whereIn($this->column, (array) $id);
 
         return $this->query;
     }
