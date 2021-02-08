@@ -22,3 +22,8 @@ All notable changes to `datum` will be documented in this file
 
 ## 0.4.0 - 2021-02-08
 - cut FilterNullableInterface
+
+
+## 0.5.0 - 2021-02-08
+- cut PublicStatusFilter class
+- refactor Sfneal\Filters\FilterListString to Sfneal\Filters\AbstractFilter
