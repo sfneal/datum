@@ -24,7 +24,7 @@ trait ApplyFilter
 
         // Apply Filter class if it exists and is a filterable attribute
         if (! is_null($decorator) && self::isValidFilterClass($decorator, $filterName)) {
-            $query = $decorator::apply($query, $filterValue);
+            $query = (new $decorator)->apply($query, $filterValue);
         }
 
         return $query;
