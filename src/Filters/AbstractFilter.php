@@ -5,7 +5,7 @@ namespace Sfneal\Filters;
 use Illuminate\Database\Eloquent\Builder;
 use Sfneal\Helpers\Strings\StringHelpers;
 
-abstract class FilterListString implements FilterInterface
+abstract class AbstractFilter implements FilterInterface
 {
     /**
      * @var Builder

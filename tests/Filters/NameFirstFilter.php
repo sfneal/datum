@@ -2,9 +2,9 @@
 
 namespace Sfneal\Datum\Tests\Filters;
 
-use Sfneal\Filters\FilterListString;
+use Sfneal\Filters\AbstractFilter;
 
-class NameFirstFilter extends FilterListString
+class NameFirstFilter extends AbstractFilter
 {
     /**
      * @var string
