@@ -6,7 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 use Sfneal\Datum\Tests\Models\People;
 use Sfneal\Queries\CacheModelQuery;
 
-class PeopleEmailQuery extends CacheModelQuery
+class CachePeopleEmailQuery extends CacheModelQuery
 {
     /**
      * Target Model.

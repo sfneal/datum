@@ -51,11 +51,22 @@ class CacheModelQuery extends AbstractQuery
     /**
      * Retrieve a Service's title.
      *
-     * @return string
+     * @return Model|string
      */
-    public function execute(): string
+    public function execute()
     {
-        return $this->model::query()->find($this->model_key)->getAttribute($this->attribute);
+        // Retrieve the model
+        $model = $this->model::query()->find($this->model_key);
+
+        // Return the entire model if no attribute is set
+        if (is_null($this->attribute)) {
+            return $model;
+        }
+
+        // Return a specific model
+        else {
+            return $model->getAttribute($this->attribute);
+        }
     }
 
     /**
@@ -66,8 +77,9 @@ class CacheModelQuery extends AbstractQuery
     public function cacheKey(): string
     {
         $table = (new $this->model)->getTable();
+        $key = "{$table}:{$this->model_key}";
 
-        return "{$table}:{$this->model_key}:{$this->attribute}";
+        return $key . (is_null($this->attribute) ? '' : ":{$this->attribute}");
     }
 
     /**
