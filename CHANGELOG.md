@@ -32,3 +32,8 @@ All notable changes to `datum` will be documented in this file
 ## 0.6.0 - 2021-02-09
 - refactor Sfneal\Queries\AbstractQueryCacheAttribute to Sfneal\Queries\CacheModel & expanded functionality
 - add tests for evaluating AbstractQueryWithFilter functionality
+
+
+## 0.7.0 - 2021-02-09
+- cut AbstractStaticQuery as it provides no additional functionality compared to AbstractQuery (and use cases result in inconsistent method params & returns)
+- add abstract execute() method to AbstractQuery that will force child classes to conform
