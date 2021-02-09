@@ -79,7 +79,7 @@ class CacheModelQuery extends AbstractQuery
         $table = (new $this->model)->getTable();
         $key = "{$table}:{$this->model_key}";
 
-        return $key . (is_null($this->attribute) ? '' : ":{$this->attribute}");
+        return $key.(is_null($this->attribute) ? '' : ":{$this->attribute}");
     }
 
     /**
