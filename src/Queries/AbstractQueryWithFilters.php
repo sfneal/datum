@@ -10,6 +10,8 @@ abstract class AbstractQueryWithFilters extends AbstractQuery implements Dynamic
 {
     use ApplyFilter;
 
+    // todo: add protected execute method with default functionality
+
     /**
      * Array of attribute/form input name keys and Filter class values.
      *

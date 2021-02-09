@@ -7,6 +7,8 @@ use Sfneal\Queries\Traits\ApplyFilter;
 
 abstract class AbstractQueryWithFilter extends AbstractQuery implements DynamicQuery
 {
+    // todo: add protected execute method with default functionality
+
     // Uses Filter classes for applying queries
     use ApplyFilter;
 
