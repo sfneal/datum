@@ -2,7 +2,6 @@
 
 namespace Sfneal\Queries;
 
-
 abstract class AbstractQuery
 {
     /**
