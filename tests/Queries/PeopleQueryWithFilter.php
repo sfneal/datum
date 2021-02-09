@@ -1,8 +1,6 @@
 <?php
 
-
 namespace Sfneal\Datum\Tests\Queries;
-
 
 use Illuminate\Database\Eloquent\Builder;
 use Sfneal\Datum\Tests\Filters\FranklinFilter;
@@ -27,7 +25,7 @@ class PeopleQueryWithFilter extends AbstractQueryWithFilter
     ];
 
     /**
-     * Execute the query
+     * Execute the query.
      *
      * @return Builder
      */
