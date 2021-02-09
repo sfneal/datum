@@ -4,9 +4,9 @@ namespace Sfneal\Datum\Tests\Queries;
 
 use Illuminate\Database\Eloquent\Model;
 use Sfneal\Datum\Tests\Models\People;
-use Sfneal\Queries\AbstractQueryCacheAttribute;
+use Sfneal\Queries\CacheModelQuery;
 
-class PeopleEmailQuery extends AbstractQueryCacheAttribute
+class CachePeopleEmailQuery extends CacheModelQuery
 {
     /**
      * Target Model.

@@ -27,3 +27,8 @@ All notable changes to `datum` will be documented in this file
 ## 0.5.0 - 2021-02-08
 - cut PublicStatusFilter class
 - refactor Sfneal\Filters\FilterListString to Sfneal\Filters\AbstractFilter
+
+
+## 0.6.0 - 2021-02-09
+- refactor Sfneal\Queries\AbstractQueryCacheAttribute to Sfneal\Queries\CacheModel & expanded functionality
+- add tests for evaluating AbstractQueryWithFilter functionality

@@ -91,6 +91,30 @@ class TestCase extends OrchestraTestCase
                 'state' => 'MA',
                 'zip' => '02445',
             ],
+            [
+                'name_first' => 'Michael',
+                'name_last' => 'Jordan',
+                'address' => '200 Cedar Street',
+                'city' => 'Charlotte',
+                'state' => 'NC',
+                'zip' => '12345',
+            ],
+            [
+                'name_first' => 'Jon',
+                'name_last' => 'Jones',
+                'address' => '3000 East Street',
+                'city' => 'Albuquerque',
+                'state' => 'NM',
+                'zip' => '04523',
+            ],
+            [
+                'name_first' => 'Peter',
+                'name_last' => 'Laviolette',
+                'address' => '62 Winter Street',
+                'city' => 'Franklin',
+                'state' => 'MA',
+                'zip' => '02038',
+            ],
         ];
     }
 

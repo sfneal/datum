@@ -16,6 +16,6 @@ class QueryStaticTest extends TestCase
         $count = PeopleCountStaticQuery::execute();
 
         $this->assertIsInt($count);
-        $this->assertSame(23, $count);
+        $this->assertSame(26, $count);
     }
 }

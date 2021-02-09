@@ -20,7 +20,7 @@ class FilterInterfaceTest extends TestCase
             'city' => 'Franklin',
         ];
 
-        $this->assertEquals(2, (new PeopleQueryWithFilters($filters))->execute()->count());
+        $this->assertEquals(3, (new PeopleQueryWithFilters($filters))->execute()->count());
     }
 
     public function test_city_filter_array()
@@ -32,7 +32,7 @@ class FilterInterfaceTest extends TestCase
             ],
         ];
 
-        $this->assertEquals(3, (new PeopleQueryWithFilters($filters))->execute()->count());
+        $this->assertEquals(4, (new PeopleQueryWithFilters($filters))->execute()->count());
     }
 
     public function test_name_last_filter_single()
