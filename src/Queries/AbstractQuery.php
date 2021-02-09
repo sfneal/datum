@@ -2,7 +2,13 @@
 
 namespace Sfneal\Queries;
 
-// TODO: create package Query
+
 abstract class AbstractQuery
 {
+    /**
+     * Execute a DB query.
+     *
+     * @return mixed
+     */
+    abstract public function execute();
 }
