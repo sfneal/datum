@@ -1,8 +1,6 @@
 <?php
 
-
 namespace Sfneal\Queries\Traits;
-
 
 trait HasKeyParam
 {
