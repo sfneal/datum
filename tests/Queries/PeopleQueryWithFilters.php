@@ -27,7 +27,7 @@ class PeopleQueryWithFilters extends AbstractQueryWithFilters
      *
      * @return Builder
      */
-    public function execute()
+    public function execute(): Builder
     {
         // Initialize query
         $query = People::query();

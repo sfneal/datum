@@ -14,7 +14,7 @@ class MassFilter implements FilterInterface
      * @param mixed $value
      * @return Builder $query
      */
-    public function apply(Builder $query, $value)
+    public function apply(Builder $query, $value): Builder
     {
         $query->where('state', '=', 'MA');
 
