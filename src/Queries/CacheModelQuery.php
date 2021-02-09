@@ -6,7 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 use Sfneal\Caching\Traits\Cacheable;
 use Sfneal\Helpers\Redis\RedisCache;
 
-abstract class AbstractQueryCacheAttribute extends AbstractQuery
+class CacheModelQuery extends AbstractQuery
 {
     /**
      * Inherit cache methods.
@@ -38,10 +38,14 @@ abstract class AbstractQueryCacheAttribute extends AbstractQuery
      * QueryCacheAttribute constructor.
      *
      * @param int $model_key
+     * @param string|null $model
+     * @param string|null $attribute
      */
-    public function __construct(int $model_key)
+    public function __construct(int $model_key, string $model = null, string $attribute = null)
     {
         $this->model_key = $model_key;
+        $this->model = $this->model ?? $model;
+        $this->attribute = $this->attribute ?? $attribute;
     }
 
     /**
