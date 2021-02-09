@@ -14,7 +14,7 @@ class GoatFilter implements FilterInterface
      * @param mixed $value
      * @return Builder $query
      */
-    public function apply(Builder $query, $value)
+    public function apply(Builder $query, $value): Builder
     {
         $query->orWhere(function (Builder $builder) {
             $builder
