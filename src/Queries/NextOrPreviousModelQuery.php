@@ -50,7 +50,7 @@ class NextOrPreviousModelQuery extends AbstractQuery
      *
      * @return Model|null
      */
-    public function execute()
+    public function execute(): ?Model
     {
         $query = $this->model::query();
 
