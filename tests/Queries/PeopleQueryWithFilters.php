@@ -12,7 +12,7 @@ use Sfneal\Queries\AbstractQueryWithFilters;
 class PeopleQueryWithFilters extends AbstractQueryWithFilters
 {
     /**
-     * Retrieve an array of model attribute keys & corresponding Filter class values
+     * Retrieve an array of model attribute keys & corresponding Filter class values.
      *
      * @return array
      */
