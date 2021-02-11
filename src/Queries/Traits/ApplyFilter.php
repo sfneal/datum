@@ -7,6 +7,15 @@ use Sfneal\Filters\Filter;
 
 trait ApplyFilter
 {
+    // todo: improve return type hinting
+
+    /**
+     * Retrieve an array of model attribute keys & corresponding Filter class values
+     *
+     * @return array
+     */
+    abstract protected function attributeFilters(): array;
+
     /**
      * Apply a filter to a Query if the Filter class is valid.
      *
@@ -53,8 +62,8 @@ trait ApplyFilter
     private function getFilterClass($name)
     {
         // Check if an array of attribute keys and Filter class values is defined
-        if (self::isValidFiltersArray($this->attribute_filters) && $this->isFilterableAttribute($name)) {
-            return $this->attribute_filters[$name];
+        if (self::isValidFiltersArray($this->attributeFilters()) && $this->isFilterableAttribute($name)) {
+            return $this->getAttributeFilter($name);
         }
     }
 
@@ -77,10 +86,21 @@ trait ApplyFilter
      */
     private function isFilterableAttribute(string $name)
     {
-        if (property_exists($this, 'attribute_filters')) {
-            return in_array($name, array_keys($this->attribute_filters));
+        if (method_exists($this, 'attributeFilters')) {
+            return in_array($name, array_keys($this->attributeFilters()));
         } else {
             return true;
         }
+    }
+
+    /**
+     * Retrieve a Filter that corresponds to an attribute
+     *
+     * @param string $name
+     * @return string
+     */
+    private function getAttributeFilter(string $name): string
+    {
+        return $this->attributeFilters()[$name];
     }
 }

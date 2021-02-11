@@ -12,13 +12,6 @@ abstract class AbstractQueryWithFilter implements Query
     use ApplyFilter;
 
     /**
-     * Array of attribute/form input name keys and Filter class values.
-     *
-     * @var array
-     */
-    public $attribute_filters;
-
-    /**
      * Filter values to be passed to Filer classes.
      *
      * @var array

@@ -12,15 +12,18 @@ use Sfneal\Queries\AbstractQueryWithFilters;
 class PeopleQueryWithFilters extends AbstractQueryWithFilters
 {
     /**
-     * Array of attribute/form input name keys and Filter class values.
+     * Retrieve an array of model attribute keys & corresponding Filter class values
      *
-     * @var array
+     * @return array
      */
-    public $attribute_filters = [
-        'city' => CityFilter::class,
-        'name_last' => NameLastFilter::class,
-        'name_first' => NameFirstFilterDynamic::class,
-    ];
+    protected function attributeFilters(): array
+    {
+        return [
+            'city' => CityFilter::class,
+            'name_last' => NameLastFilter::class,
+            'name_first' => NameFirstFilterDynamic::class,
+        ];
+    }
 
     /**
      * Execute a DB query using filter parameters.
