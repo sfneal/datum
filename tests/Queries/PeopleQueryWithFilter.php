@@ -13,16 +13,19 @@ use Sfneal\Queries\AbstractQueryWithFilter;
 class PeopleQueryWithFilter extends AbstractQueryWithFilter
 {
     /**
-     * Array of attribute/form input name keys and Filter class values.
+     * Retrieve an array of model attribute keys & corresponding Filter class values.
      *
-     * @var array
+     * @return array
      */
-    public $attribute_filters = [
-        'goat' => GoatFilter::class,
-        'neal' => NealFilter::class,
-        'franklin' => FranklinFilter::class,
-        'ma' => MassFilter::class,
-    ];
+    protected function queryFilters(): array
+    {
+        return [
+            'goat' => GoatFilter::class,
+            'neal' => NealFilter::class,
+            'franklin' => FranklinFilter::class,
+            'ma' => MassFilter::class,
+        ];
+    }
 
     /**
      * Execute the query.

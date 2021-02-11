@@ -12,13 +12,6 @@ abstract class AbstractQueryWithFilters implements Query
     // todo: add protected execute method with default functionality
 
     /**
-     * Array of attribute/form input name keys and Filter class values.
-     *
-     * @var array
-     */
-    public $attribute_filters;
-
-    /**
      * Filter values to be passed to Filer classes.
      *
      * @var array
@@ -70,7 +63,7 @@ abstract class AbstractQueryWithFilters implements Query
         return array_filter($filters, function ($value, $filter) {
 
             // Return true if the filter is a filterable attribute
-            return in_array($filter, array_keys($this->attribute_filters)) && ! is_null($value);
+            return in_array($filter, array_keys($this->queryFilters())) && ! is_null($value);
         }, ARRAY_FILTER_USE_BOTH);
     }
 }

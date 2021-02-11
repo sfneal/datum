@@ -12,13 +12,6 @@ abstract class AbstractQueryWithFilter implements Query
     use ApplyFilter;
 
     /**
-     * Array of attribute/form input name keys and Filter class values.
-     *
-     * @var array
-     */
-    public $attribute_filters;
-
-    /**
      * Filter values to be passed to Filer classes.
      *
      * @var array
@@ -28,9 +21,9 @@ abstract class AbstractQueryWithFilter implements Query
     /**
      * QueryWithFilter constructor.
      *
-     * @param string  $filter  name of the bucket to filter by
+     * @param string $filter name of the bucket to filter by
      */
-    public function __construct($filter)
+    public function __construct(string $filter)
     {
         $this->filter = $filter;
     }

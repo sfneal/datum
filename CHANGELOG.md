@@ -54,3 +54,8 @@ All notable changes to `datum` will be documented in this file
 - refactor Sfneal\Filters\FilterInterface to Sfneal\Filters\Filter
 - refactor Sfneal\Filters\AbstractFilter to Sfneal\Filters\FilterDynamic because its not a general abstraction
 - refactor Sfneal\Queries\Interfaces\DynamicQuery to Sfneal\Queries\Query
+
+
+## 0.9.0 - 2021-02-11
+_- add abstract queryFilters() method to ApplyFilter for declaring an array of Filters 
+- cut $attribute_filters properties from AbstractQueryWithFilter(s) and replaced with queryFilters() methods._
