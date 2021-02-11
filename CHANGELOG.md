@@ -47,3 +47,10 @@ All notable changes to `datum` will be documented in this file
 ## 0.7.2 - 2021-02-10
 - bump min sfneal/caching version to 1.2 to make use of isCached() method provided by the Cacheable trait
 - optimize return type hinting in NextOrPreviousModel::execute() method
+
+
+## 0.8.0 - 2021-02-11
+- cut __construct method from FilterDynamic because changing the column during runtime was unneeded
+- refactor Sfneal\Filters\FilterInterface to Sfneal\Filters\Filter
+- refactor Sfneal\Filters\AbstractFilter to Sfneal\Filters\FilterDynamic because its not a general abstraction
+- refactor Sfneal\Queries\Interfaces\DynamicQuery to Sfneal\Queries\Query
