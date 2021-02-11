@@ -2,10 +2,10 @@
 
 namespace Sfneal\Queries;
 
-use Sfneal\Queries\Interfaces\DynamicQuery;
+use Sfneal\Queries\Interfaces\Query;
 use Sfneal\Queries\Traits\ApplyFilter;
 
-abstract class AbstractQueryWithFilter extends AbstractQuery implements DynamicQuery
+abstract class AbstractQueryWithFilter implements Query
 {
     // todo: add protected execute method with default functionality
 
