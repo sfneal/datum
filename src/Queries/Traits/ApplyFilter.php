@@ -10,7 +10,7 @@ trait ApplyFilter
     // todo: improve return type hinting
 
     /**
-     * Retrieve an array of model attribute keys & corresponding Filter class values
+     * Retrieve an array of model attribute keys & corresponding Filter class values.
      *
      * @return array
      */
@@ -94,7 +94,7 @@ trait ApplyFilter
     }
 
     /**
-     * Retrieve a Filter that corresponds to an attribute
+     * Retrieve a Filter that corresponds to an attribute.
      *
      * @param string $name
      * @return string
