@@ -55,7 +55,7 @@ abstract class AbstractFilter implements FilterInterface
      * Add a where clause that searches for a single value.
      *
      * @param string $id
-     * @return Builder $query
+     * @return Builder
      */
     protected function stringValueClause($id)
     {
@@ -68,7 +68,7 @@ abstract class AbstractFilter implements FilterInterface
      * Add a where clause that searches for an array of values.
      *
      * @param array $ids
-     * @return Builder $query;
+     * @return Builder
      */
     protected function arrayValueClause(array $ids)
     {
