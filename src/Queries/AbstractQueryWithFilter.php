@@ -21,9 +21,9 @@ abstract class AbstractQueryWithFilter implements Query
     /**
      * QueryWithFilter constructor.
      *
-     * @param string  $filter  name of the bucket to filter by
+     * @param string $filter name of the bucket to filter by
      */
-    public function __construct($filter)
+    public function __construct(string $filter)
     {
         $this->filter = $filter;
     }
