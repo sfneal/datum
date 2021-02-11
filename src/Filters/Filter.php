@@ -4,7 +4,7 @@ namespace Sfneal\Filters;
 
 use Illuminate\Database\Eloquent\Builder;
 
-interface FilterInterface
+interface Filter
 {
     /**
      * Apply a given search value to the builder instance.

@@ -3,10 +3,9 @@
 namespace Sfneal\Queries;
 
 use Illuminate\Database\Eloquent\Builder;
-use Sfneal\Queries\Interfaces\DynamicQuery;
 use Sfneal\Queries\Traits\ApplyFilter;
 
-abstract class AbstractQueryWithFilters extends AbstractQuery implements DynamicQuery
+abstract class AbstractQueryWithFilters implements Query
 {
     use ApplyFilter;
 

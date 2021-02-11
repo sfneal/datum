@@ -2,12 +2,12 @@
 
 namespace Sfneal\Queries;
 
-abstract class AbstractQuery
+interface Query
 {
     /**
      * Execute a DB query.
      *
      * @return mixed
      */
-    abstract public function execute();
+    public function execute();
 }

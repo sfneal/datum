@@ -3,9 +3,9 @@
 namespace Sfneal\Datum\Tests\Queries;
 
 use Sfneal\Datum\Tests\Models\People;
-use Sfneal\Queries\AbstractQuery;
+use Sfneal\Queries\Query;
 
-class PeopleCountQuery extends AbstractQuery
+class PeopleCountQuery implements Query
 {
     /**
      * Execute a static query to retrieve the number of People records.

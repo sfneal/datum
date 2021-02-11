@@ -4,10 +4,10 @@ namespace Sfneal\Datum\Tests\Queries;
 
 use Illuminate\Database\Eloquent\Builder;
 use Sfneal\Datum\Tests\Models\People;
-use Sfneal\Queries\AbstractQuery;
+use Sfneal\Queries\Query;
 use Sfneal\Queries\Traits\HasKeyParam;
 
-class PeopleQuery extends AbstractQuery
+class PeopleQuery implements Query
 {
     use HasKeyParam;
 

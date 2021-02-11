@@ -5,7 +5,7 @@ namespace Sfneal\Queries;
 use Illuminate\Database\Eloquent\Model;
 use Sfneal\Caching\Traits\Cacheable;
 
-class CacheModelQuery extends AbstractQuery
+class CacheModelQuery implements Query
 {
     /**
      * Inherit cache methods.

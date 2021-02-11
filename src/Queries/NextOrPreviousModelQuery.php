@@ -6,7 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 use Sfneal\Caching\Traits\Cacheable;
 use Sfneal\Models\AbstractModel;
 
-class NextOrPreviousModelQuery extends AbstractQuery
+class NextOrPreviousModelQuery implements Query
 {
     use Cacheable;
 

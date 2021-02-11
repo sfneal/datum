@@ -5,7 +5,7 @@ namespace Sfneal\Filters;
 use Illuminate\Database\Eloquent\Builder;
 use Sfneal\Helpers\Strings\StringHelpers;
 
-abstract class AbstractFilter implements FilterInterface
+abstract class FilterDynamic implements Filter
 {
     /**
      * @var Builder
@@ -16,16 +16,6 @@ abstract class AbstractFilter implements FilterInterface
      * @var string
      */
     protected $column = 'id';
-
-    /**
-     * FilterListString constructor.
-     *
-     * @param string|null $column
-     */
-    public function __construct(string $column = null)
-    {
-        $this->column = $column ?? $this->column;
-    }
 
     /**
      * Apply a given search value to the builder instance.
@@ -65,7 +55,7 @@ abstract class AbstractFilter implements FilterInterface
      * Add a where clause that searches for a single value.
      *
      * @param string $id
-     * @return Builder $query
+     * @return Builder
      */
     protected function stringValueClause($id)
     {
@@ -78,7 +68,7 @@ abstract class AbstractFilter implements FilterInterface
      * Add a where clause that searches for an array of values.
      *
      * @param array $ids
-     * @return Builder $query;
+     * @return Builder
      */
     protected function arrayValueClause(array $ids)
     {
