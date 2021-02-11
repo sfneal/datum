@@ -14,7 +14,7 @@ trait ApplyFilter
      *
      * @return array
      */
-    abstract protected function attributeFilters(): array;
+    abstract protected function queryFilters(): array;
 
     /**
      * Apply a filter to a Query if the Filter class is valid.
@@ -62,7 +62,7 @@ trait ApplyFilter
     private function getFilterClass($name)
     {
         // Check if an array of attribute keys and Filter class values is defined
-        if (self::isValidFiltersArray($this->attributeFilters()) && $this->isFilterableAttribute($name)) {
+        if (self::isValidFiltersArray($this->queryFilters()) && $this->isFilterableAttribute($name)) {
             return $this->getAttributeFilter($name);
         }
     }
@@ -86,8 +86,8 @@ trait ApplyFilter
      */
     private function isFilterableAttribute(string $name)
     {
-        if (method_exists($this, 'attributeFilters')) {
-            return in_array($name, array_keys($this->attributeFilters()));
+        if (method_exists($this, 'queryFilters')) {
+            return in_array($name, array_keys($this->queryFilters()));
         } else {
             return true;
         }
@@ -101,6 +101,6 @@ trait ApplyFilter
      */
     private function getAttributeFilter(string $name): string
     {
-        return $this->attributeFilters()[$name];
+        return $this->queryFilters()[$name];
     }
 }

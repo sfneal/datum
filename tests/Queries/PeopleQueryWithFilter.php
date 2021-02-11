@@ -17,7 +17,7 @@ class PeopleQueryWithFilter extends AbstractQueryWithFilter
      *
      * @return array
      */
-    protected function attributeFilters(): array
+    protected function queryFilters(): array
     {
         return [
             'goat' => GoatFilter::class,

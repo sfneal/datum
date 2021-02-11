@@ -63,7 +63,7 @@ abstract class AbstractQueryWithFilters implements Query
         return array_filter($filters, function ($value, $filter) {
 
             // Return true if the filter is a filterable attribute
-            return in_array($filter, array_keys($this->attributeFilters())) && ! is_null($value);
+            return in_array($filter, array_keys($this->queryFilters())) && ! is_null($value);
         }, ARRAY_FILTER_USE_BOTH);
     }
 }
