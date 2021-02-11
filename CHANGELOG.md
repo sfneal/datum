@@ -57,5 +57,5 @@ All notable changes to `datum` will be documented in this file
 
 
 ## 0.9.0 - 2021-02-11
-_- add abstract queryFilters() method to ApplyFilter for declaring an array of Filters 
+- add abstract queryFilters() method to ApplyFilter for declaring an array of Filters 
 - cut $attribute_filters properties from AbstractQueryWithFilter(s) and replaced with queryFilters() methods._
