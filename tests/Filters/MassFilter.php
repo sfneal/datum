@@ -3,9 +3,9 @@
 namespace Sfneal\Datum\Tests\Filters;
 
 use Illuminate\Database\Eloquent\Builder;
-use Sfneal\Filters\FilterInterface;
+use Sfneal\Filters\Filter;
 
-class MassFilter implements FilterInterface
+class MassFilter implements Filter
 {
     /**
      * Apply a given search value to the builder instance.

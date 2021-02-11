@@ -3,7 +3,7 @@
 namespace Sfneal\Queries\Traits;
 
 use Illuminate\Database\Eloquent\Builder;
-use Sfneal\Filters\FilterInterface;
+use Sfneal\Filters\Filter;
 
 trait ApplyFilter
 {
@@ -13,7 +13,7 @@ trait ApplyFilter
      * @param Builder $query
      * @param string $filterName
      * @param mixed $filterValue
-     * @param FilterInterface $decorator
+     * @param Filter $decorator
      * @return Builder
      */
     public function applyFilterToQuery(Builder $query, string $filterName, $filterValue = null, $decorator = null)
@@ -48,7 +48,7 @@ trait ApplyFilter
      * Create a filter decorator by manipulating filter name to find the corresponding filter class.
      *
      * @param $name
-     * @return null|string|FilterInterface
+     * @return null|string|Filter
      */
     private function getFilterClass($name)
     {
