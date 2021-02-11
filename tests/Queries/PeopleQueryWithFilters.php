@@ -16,7 +16,7 @@ class PeopleQueryWithFilters extends AbstractQueryWithFilters
      *
      * @return array
      */
-    protected function attributeFilters(): array
+    protected function queryFilters(): array
     {
         return [
             'city' => CityFilter::class,
