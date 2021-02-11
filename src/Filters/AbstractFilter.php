@@ -18,16 +18,6 @@ abstract class AbstractFilter implements FilterInterface
     protected $column = 'id';
 
     /**
-     * FilterListString constructor.
-     *
-     * @param string|null $column
-     */
-    public function __construct(string $column = null)
-    {
-        $this->column = $column ?? $this->column;
-    }
-
-    /**
      * Apply a given search value to the builder instance.
      *
      *  - if a 'string' value is found then a single value where clause is added
