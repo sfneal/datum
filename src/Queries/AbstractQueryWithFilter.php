@@ -2,7 +2,6 @@
 
 namespace Sfneal\Queries;
 
-use Sfneal\Queries\Interfaces\Query;
 use Sfneal\Queries\Traits\ApplyFilter;
 
 abstract class AbstractQueryWithFilter implements Query

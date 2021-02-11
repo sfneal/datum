@@ -4,7 +4,6 @@ namespace Sfneal\Queries;
 
 use Illuminate\Database\Eloquent\Model;
 use Sfneal\Caching\Traits\Cacheable;
-use Sfneal\Queries\Interfaces\Query;
 
 class CacheModelQuery implements Query
 {

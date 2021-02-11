@@ -1,6 +1,6 @@
 <?php
 
-namespace Sfneal\Queries\Interfaces;
+namespace Sfneal\Queries;
 
 interface Query
 {

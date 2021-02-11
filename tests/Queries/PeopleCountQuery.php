@@ -3,7 +3,7 @@
 namespace Sfneal\Datum\Tests\Queries;
 
 use Sfneal\Datum\Tests\Models\People;
-use Sfneal\Queries\Interfaces\Query;
+use Sfneal\Queries\Query;
 
 class PeopleCountQuery implements Query
 {

@@ -3,7 +3,6 @@
 namespace Sfneal\Queries;
 
 use Illuminate\Database\Eloquent\Builder;
-use Sfneal\Queries\Interfaces\Query;
 use Sfneal\Queries\Traits\ApplyFilter;
 
 abstract class AbstractQueryWithFilters implements Query

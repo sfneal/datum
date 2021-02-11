@@ -4,7 +4,7 @@ namespace Sfneal\Datum\Tests\Queries;
 
 use Illuminate\Database\Eloquent\Builder;
 use Sfneal\Datum\Tests\Models\People;
-use Sfneal\Queries\Interfaces\Query;
+use Sfneal\Queries\Query;
 use Sfneal\Queries\Traits\HasKeyParam;
 
 class PeopleQuery implements Query
