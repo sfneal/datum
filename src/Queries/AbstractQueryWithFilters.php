@@ -36,7 +36,7 @@ abstract class AbstractQueryWithFilters implements Query
      * @param array|null $filters
      * @return Builder
      */
-    public function applyFiltersToQuery(Builder $builder, array $filters = null)
+    protected function applyFiltersToQuery(Builder $builder, array $filters = null)
     {
         // Wrap scopes
         $builder->where(function (Builder $query) use ($filters) {

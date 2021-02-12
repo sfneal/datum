@@ -25,7 +25,7 @@ trait ApplyFilter
      * @param Filter $decorator
      * @return Builder
      */
-    public function applyFilterToQuery(Builder $query, string $filterName, $filterValue = null, $decorator = null)
+    protected function applyFilterToQuery(Builder $query, string $filterName, $filterValue = null, $decorator = null)
     {
         // Get the Filter class if none is provided
         $decorator = $decorator ?? self::getFilterClass($filterName);
