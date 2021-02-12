@@ -72,5 +72,5 @@ All notable changes to `datum` will be documented in this file
 - add filterQuery() method to HasFilters trait (and in turn AbstractFilterableQuery) that either applies a Single filter or an array of Filters to the Query
 
 
-## 0.10.0 - 2021-02-12
+## 0.10.1 - 2021-02-12
 - fix AbstractFilterableQuery::execute methods return type hinting
