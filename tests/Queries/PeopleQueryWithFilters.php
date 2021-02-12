@@ -6,11 +6,13 @@ use Illuminate\Database\Eloquent\Builder;
 use Sfneal\Datum\Tests\Filters\CityFilter;
 use Sfneal\Datum\Tests\Filters\NameFirstFilterDynamic;
 use Sfneal\Datum\Tests\Filters\NameLastFilter;
-use Sfneal\Datum\Tests\Models\People;
+use Sfneal\Datum\Tests\Queries\Traits\PeopleBuilder;
 use Sfneal\Queries\AbstractQueryWithFilters;
 
 class PeopleQueryWithFilters extends AbstractQueryWithFilters
 {
+    use PeopleBuilder;
+
     /**
      * Retrieve an array of model attribute keys & corresponding Filter class values.
      *
@@ -33,7 +35,7 @@ class PeopleQueryWithFilters extends AbstractQueryWithFilters
     public function execute(): Builder
     {
         // Initialize query
-        $query = People::query();
+        $query = $this->builder();
 
         // Apply filters
         $query = $this->applyFiltersToQuery($query);

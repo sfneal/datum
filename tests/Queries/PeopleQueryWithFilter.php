@@ -7,11 +7,13 @@ use Sfneal\Datum\Tests\Filters\FranklinFilter;
 use Sfneal\Datum\Tests\Filters\GoatFilter;
 use Sfneal\Datum\Tests\Filters\MassFilter;
 use Sfneal\Datum\Tests\Filters\NealFilter;
-use Sfneal\Datum\Tests\Models\People;
+use Sfneal\Datum\Tests\Queries\Traits\PeopleBuilder;
 use Sfneal\Queries\AbstractQueryWithFilter;
 
 class PeopleQueryWithFilter extends AbstractQueryWithFilter
 {
+    use PeopleBuilder;
+
     /**
      * Retrieve an array of model attribute keys & corresponding Filter class values.
      *
@@ -35,7 +37,7 @@ class PeopleQueryWithFilter extends AbstractQueryWithFilter
     public function execute(): Builder
     {
         // Initialize query
-        $query = People::query();
+        $query = $this->builder();
 
         // Apply filters
         $query = $this->applyFilterToQuery($query, $this->filter);

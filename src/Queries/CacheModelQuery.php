@@ -2,6 +2,7 @@
 
 namespace Sfneal\Queries;
 
+use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Model;
 use Sfneal\Caching\Traits\Cacheable;
 
@@ -48,6 +49,16 @@ class CacheModelQuery implements Query
     }
 
     /**
+     * Retrieve a Query builder.
+     *
+     * @return Builder
+     */
+    public function builder(): Builder
+    {
+        return $this->model::query();
+    }
+
+    /**
      * Retrieve a Service's title.
      *
      * @return Model|string
@@ -55,7 +66,7 @@ class CacheModelQuery implements Query
     public function execute()
     {
         // Retrieve the model
-        $model = $this->model::query()->find($this->model_key);
+        $model = $this->builder()->find($this->model_key);
 
         // Return the entire model if no attribute is set
         if (is_null($this->attribute)) {

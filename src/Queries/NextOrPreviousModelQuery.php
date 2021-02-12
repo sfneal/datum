@@ -2,6 +2,7 @@
 
 namespace Sfneal\Queries;
 
+use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Model;
 use Sfneal\Caching\Traits\Cacheable;
 use Sfneal\Models\AbstractModel;
@@ -43,6 +44,16 @@ class NextOrPreviousModelQuery implements Query
         $this->model_id = $model_id;
         $this->next = $next;
         $this->cache_key_string = $next ? 'next' : 'previous';
+    }
+
+    /**
+     * Retrieve a Query builder.
+     *
+     * @return Builder
+     */
+    public function builder(): Builder
+    {
+        return $this->model::query();
     }
 
     /**
