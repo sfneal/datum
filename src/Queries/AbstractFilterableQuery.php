@@ -2,7 +2,6 @@
 
 namespace Sfneal\Queries;
 
-use Illuminate\Database\Eloquent\Builder;
 use Sfneal\Queries\Traits\HasFilters;
 
 abstract class AbstractFilterableQuery implements Query
@@ -38,9 +37,9 @@ abstract class AbstractFilterableQuery implements Query
     /**
      * Execute a DB query using filter parameters.
      *
-     * @return Builder
+     * @return mixed
      */
-    public function execute(): Builder
+    public function execute()
     {
         // Initialize query
         $query = $this->builder();

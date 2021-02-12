@@ -70,3 +70,7 @@ All notable changes to `datum` will be documented in this file
 - refactor AbstractQueryWithFilter & AbstractQueryWithFilters to single AbstractFilterableQuery class that can handle single Filters or arrays of Filters
 - add overridable default execute() method to AbstractFilterableQuery that apply's the Filters to the Query Builder
 - add filterQuery() method to HasFilters trait (and in turn AbstractFilterableQuery) that either applies a Single filter or an array of Filters to the Query
+
+
+## 0.10.0 - 2021-02-12
+- fix AbstractFilterableQuery::execute methods return type hinting
