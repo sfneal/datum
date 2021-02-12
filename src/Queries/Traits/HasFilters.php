@@ -17,7 +17,7 @@ trait HasFilters
     abstract protected function queryFilters(): array;
 
     /**
-     * Apply pre-defined Filters to a Query
+     * Apply pre-defined Filters to a Query.
      *
      * @param Builder $builder
      * @param null $filters
@@ -26,7 +26,7 @@ trait HasFilters
     protected function filterQuery(Builder $builder, $filters = null)
     {
         // Check if a single filter was passed
-        if (!is_null($filters) && is_string($filters)) {
+        if (! is_null($filters) && is_string($filters)) {
             return self::applyFilter($builder, $filters);
         }
 
