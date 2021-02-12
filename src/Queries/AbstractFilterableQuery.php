@@ -5,7 +5,7 @@ namespace Sfneal\Queries;
 use Illuminate\Database\Eloquent\Builder;
 use Sfneal\Queries\Traits\HasFilters;
 
-abstract class AbstractQueryWithFilters implements Query
+abstract class AbstractFilterableQuery implements Query
 {
     use HasFilters;
 
@@ -19,12 +19,20 @@ abstract class AbstractQueryWithFilters implements Query
     /**
      * QueryWithFilters constructor.
      *
-     * @param array $filters
+     * @param array|string $filters
      */
-    public function __construct(array $filters)
+    public function __construct($filters)
     {
-        // Remove invalid filters prior to executing query
-        $this->filters = $this->filterFilters($filters);
+        // Array of Filters with dynamic values
+        if (is_array($filters)) {
+            // Remove invalid filters prior to executing query
+            $this->filters = $this->filterFilters($filters);
+        }
+
+        // Single Filter without a dynamic value
+        else {
+            $this->filters = [$filters => null];
+        }
     }
 
     /**
