@@ -12,7 +12,7 @@ abstract class AbstractQueryWithFilter implements Query
     /**
      * Filter values to be passed to Filer classes.
      *
-     * @var array
+     * @var string
      */
     private $filter;
 
