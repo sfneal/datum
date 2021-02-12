@@ -3,11 +3,11 @@
 namespace Sfneal\Queries;
 
 use Illuminate\Database\Eloquent\Builder;
-use Sfneal\Queries\Traits\ApplyFilter;
+use Sfneal\Queries\Traits\HasFilters;
 
 abstract class AbstractQueryWithFilter implements Query
 {
-    use ApplyFilter;
+    use HasFilters;
 
     /**
      * Filter values to be passed to Filer classes.

@@ -5,7 +5,7 @@ namespace Sfneal\Queries\Traits;
 use Illuminate\Database\Eloquent\Builder;
 use Sfneal\Filters\Filter;
 
-trait ApplyFilter
+trait HasFilters
 {
     // todo: improve return type hinting
 
