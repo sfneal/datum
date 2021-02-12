@@ -38,7 +38,7 @@ abstract class AbstractQueryWithFilters implements Query
         $query = $this->builder();
 
         // Apply filters
-        $query = $this->applyFiltersToQuery($query);
+        $query = $this->applyFilters($query);
 
         // Return query
         return $query;

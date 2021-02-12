@@ -23,7 +23,7 @@ trait HasFilters
      * @param array|null $filters
      * @return Builder
      */
-    protected function applyFiltersToQuery(Builder $builder, array $filters = null)
+    protected function applyFilters(Builder $builder, array $filters = null)
     {
         // Wrap scopes
         $builder->where(function (Builder $query) use ($filters) {
@@ -32,7 +32,7 @@ trait HasFilters
             foreach ($filters ?? $this->filters as $filterName => $value) {
 
                 // Apply Filter class if it exists and is a filterable attribute
-                $query = self::applyFilterToQuery($query, $filterName, $value);
+                $query = self::applyFilter($query, $filterName, $value);
             }
         });
 
@@ -48,7 +48,7 @@ trait HasFilters
      * @param Filter $decorator
      * @return Builder
      */
-    protected function applyFilterToQuery(Builder $query, string $filterName, $filterValue = null, $decorator = null)
+    protected function applyFilter(Builder $query, string $filterName, $filterValue = null, $decorator = null)
     {
         // Get the Filter class if none is provided
         $decorator = $decorator ?? self::getFilterClass($filterName);
