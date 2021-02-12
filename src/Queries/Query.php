@@ -6,6 +6,8 @@ use Illuminate\Database\Eloquent\Builder;
 
 interface Query
 {
+    // todo: make builder() a protected method
+
     /**
      * Retrieve a Query builder.
      *
