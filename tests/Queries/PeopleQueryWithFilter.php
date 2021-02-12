@@ -2,7 +2,6 @@
 
 namespace Sfneal\Datum\Tests\Queries;
 
-use Illuminate\Database\Eloquent\Builder;
 use Sfneal\Datum\Tests\Filters\FranklinFilter;
 use Sfneal\Datum\Tests\Filters\GoatFilter;
 use Sfneal\Datum\Tests\Filters\MassFilter;
@@ -27,22 +26,5 @@ class PeopleQueryWithFilter extends AbstractQueryWithFilter
             'franklin' => FranklinFilter::class,
             'ma' => MassFilter::class,
         ];
-    }
-
-    /**
-     * Execute the query.
-     *
-     * @return Builder
-     */
-    public function execute(): Builder
-    {
-        // Initialize query
-        $query = $this->builder();
-
-        // Apply filters
-        $query = $this->applyFilterToQuery($query, $this->filter);
-
-        // Return the query
-        return $query;
     }
 }

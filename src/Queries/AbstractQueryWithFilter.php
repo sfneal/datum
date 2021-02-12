@@ -2,13 +2,11 @@
 
 namespace Sfneal\Queries;
 
+use Illuminate\Database\Eloquent\Builder;
 use Sfneal\Queries\Traits\ApplyFilter;
 
 abstract class AbstractQueryWithFilter implements Query
 {
-    // todo: add protected execute method with default functionality
-
-    // Uses Filter classes for applying queries
     use ApplyFilter;
 
     /**
@@ -16,7 +14,7 @@ abstract class AbstractQueryWithFilter implements Query
      *
      * @var array
      */
-    public $filter;
+    private $filter;
 
     /**
      * QueryWithFilter constructor.
@@ -26,5 +24,22 @@ abstract class AbstractQueryWithFilter implements Query
     public function __construct(string $filter)
     {
         $this->filter = $filter;
+    }
+
+    /**
+     * Execute the query.
+     *
+     * @return Builder
+     */
+    public function execute(): Builder
+    {
+        // Initialize query
+        $query = $this->builder();
+
+        // Apply filters
+        $query = $this->applyFilterToQuery($query, $this->filter);
+
+        // Return the query
+        return $query;
     }
 }

@@ -9,8 +9,6 @@ abstract class AbstractQueryWithFilters implements Query
 {
     use ApplyFilter;
 
-    // todo: add protected execute method with default functionality
-
     /**
      * Filter values to be passed to Filer classes.
      *
@@ -30,26 +28,20 @@ abstract class AbstractQueryWithFilters implements Query
     }
 
     /**
-     * Apply Filter decorators to the query if both the parameter is given and the Filter class exists.
+     * Execute a DB query using filter parameters.
      *
-     * @param Builder $builder
-     * @param array|null $filters
      * @return Builder
      */
-    protected function applyFiltersToQuery(Builder $builder, array $filters = null)
+    public function execute(): Builder
     {
-        // Wrap scopes
-        $builder->where(function (Builder $query) use ($filters) {
+        // Initialize query
+        $query = $this->builder();
 
-            // Check every parameter to see if there's a corresponding Filter class
-            foreach ($filters ?? $this->filters as $filterName => $value) {
+        // Apply filters
+        $query = $this->applyFiltersToQuery($query);
 
-                // Apply Filter class if it exists and is a filterable attribute
-                $query = self::applyFilterToQuery($query, $filterName, $value);
-            }
-        });
-
-        return $builder;
+        // Return query
+        return $query;
     }
 
     /**

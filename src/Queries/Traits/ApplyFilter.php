@@ -17,6 +17,29 @@ trait ApplyFilter
     abstract protected function queryFilters(): array;
 
     /**
+     * Apply Filter decorators to the query if both the parameter is given and the Filter class exists.
+     *
+     * @param Builder $builder
+     * @param array|null $filters
+     * @return Builder
+     */
+    protected function applyFiltersToQuery(Builder $builder, array $filters = null)
+    {
+        // Wrap scopes
+        $builder->where(function (Builder $query) use ($filters) {
+
+            // Check every parameter to see if there's a corresponding Filter class
+            foreach ($filters ?? $this->filters as $filterName => $value) {
+
+                // Apply Filter class if it exists and is a filterable attribute
+                $query = self::applyFilterToQuery($query, $filterName, $value);
+            }
+        });
+
+        return $builder;
+    }
+
+    /**
      * Apply a filter to a Query if the Filter class is valid.
      *
      * @param Builder $query
