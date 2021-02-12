@@ -5,7 +5,7 @@ namespace Sfneal\Queries\Traits;
 use Illuminate\Database\Eloquent\Builder;
 use Sfneal\Filters\Filter;
 
-trait ApplyFilter
+trait HasFilters
 {
     // todo: improve return type hinting
 
@@ -17,6 +17,49 @@ trait ApplyFilter
     abstract protected function queryFilters(): array;
 
     /**
+     * Apply pre-defined Filters to a Query.
+     *
+     * @param Builder $builder
+     * @param null $filters
+     * @return Builder
+     */
+    protected function filterQuery(Builder $builder, $filters = null)
+    {
+        // Check if a single filter was passed
+        if (! is_null($filters) && is_string($filters)) {
+            return self::applyFilter($builder, $filters);
+        }
+
+        // Working with an array of filters
+        else {
+            return self::applyFilters($builder, $filters);
+        }
+    }
+
+    /**
+     * Apply Filter decorators to the query if both the parameter is given and the Filter class exists.
+     *
+     * @param Builder $builder
+     * @param array|null $filters
+     * @return Builder
+     */
+    private function applyFilters(Builder $builder, array $filters = null)
+    {
+        // Wrap scopes
+        $builder->where(function (Builder $query) use ($filters) {
+
+            // Check every parameter to see if there's a corresponding Filter class
+            foreach ($filters ?? $this->filters as $filterName => $value) {
+
+                // Apply Filter class if it exists and is a filterable attribute
+                $query = self::applyFilter($query, $filterName, $value);
+            }
+        });
+
+        return $builder;
+    }
+
+    /**
      * Apply a filter to a Query if the Filter class is valid.
      *
      * @param Builder $query
@@ -25,7 +68,7 @@ trait ApplyFilter
      * @param Filter $decorator
      * @return Builder
      */
-    public function applyFilterToQuery(Builder $query, string $filterName, $filterValue = null, $decorator = null)
+    private function applyFilter(Builder $query, string $filterName, $filterValue = null, $decorator = null)
     {
         // Get the Filter class if none is provided
         $decorator = $decorator ?? self::getFilterClass($filterName);

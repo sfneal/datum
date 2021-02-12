@@ -63,3 +63,10 @@ All notable changes to `datum` will be documented in this file
 
 ## 0.9.1 - 2021-02-11
 - make Sfneal\Queries\Traits\HasRelationships trait for dynamically adding relationships to a query
+
+
+## 0.10.0 - 2021-02-12
+- add builder() method to Query interface for dynamically declaring a Query Builder instance
+- refactor AbstractQueryWithFilter & AbstractQueryWithFilters to single AbstractFilterableQuery class that can handle single Filters or arrays of Filters
+- add overridable default execute() method to AbstractFilterableQuery that apply's the Filters to the Query Builder
+- add filterQuery() method to HasFilters trait (and in turn AbstractFilterableQuery) that either applies a Single filter or an array of Filters to the Query

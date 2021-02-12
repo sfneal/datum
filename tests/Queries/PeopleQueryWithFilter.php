@@ -2,16 +2,17 @@
 
 namespace Sfneal\Datum\Tests\Queries;
 
-use Illuminate\Database\Eloquent\Builder;
 use Sfneal\Datum\Tests\Filters\FranklinFilter;
 use Sfneal\Datum\Tests\Filters\GoatFilter;
 use Sfneal\Datum\Tests\Filters\MassFilter;
 use Sfneal\Datum\Tests\Filters\NealFilter;
-use Sfneal\Datum\Tests\Models\People;
-use Sfneal\Queries\AbstractQueryWithFilter;
+use Sfneal\Datum\Tests\Queries\Traits\PeopleBuilder;
+use Sfneal\Queries\AbstractFilterableQuery;
 
-class PeopleQueryWithFilter extends AbstractQueryWithFilter
+class PeopleQueryWithFilter extends AbstractFilterableQuery
 {
+    use PeopleBuilder;
+
     /**
      * Retrieve an array of model attribute keys & corresponding Filter class values.
      *
@@ -25,22 +26,5 @@ class PeopleQueryWithFilter extends AbstractQueryWithFilter
             'franklin' => FranklinFilter::class,
             'ma' => MassFilter::class,
         ];
-    }
-
-    /**
-     * Execute the query.
-     *
-     * @return Builder
-     */
-    public function execute(): Builder
-    {
-        // Initialize query
-        $query = People::query();
-
-        // Apply filters
-        $query = $this->applyFilterToQuery($query, $this->filter);
-
-        // Return the query
-        return $query;
     }
 }

@@ -2,11 +2,13 @@
 
 namespace Sfneal\Datum\Tests\Queries;
 
-use Sfneal\Datum\Tests\Models\People;
+use Sfneal\Datum\Tests\Queries\Traits\PeopleBuilder;
 use Sfneal\Queries\Query;
 
 class PeopleCountQuery implements Query
 {
+    use PeopleBuilder;
+
     /**
      * Execute a static query to retrieve the number of People records.
      *
@@ -14,6 +16,6 @@ class PeopleCountQuery implements Query
      */
     public function execute(): int
     {
-        return People::query()->count();
+        return $this->builder()->count();
     }
 }
