@@ -13,7 +13,14 @@ abstract class AbstractFilterableQuery implements Query
      *
      * @var array
      */
-    private $filters;
+    protected $filters;
+
+    /**
+     * Filter name to be used.
+     *
+     * @var string
+     */
+    protected $filter;
 
     /**
      * QueryWithFilters constructor.
@@ -31,6 +38,7 @@ abstract class AbstractFilterableQuery implements Query
         // Single Filter without a dynamic value
         else {
             $this->filters = [$filters => null];
+            $this->filter = $filters;
         }
     }
 
