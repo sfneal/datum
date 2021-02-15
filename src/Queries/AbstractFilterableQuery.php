@@ -4,7 +4,7 @@ namespace Sfneal\Queries;
 
 use Sfneal\Queries\Traits\HasFilters;
 
-abstract class AbstractFilterableQuery implements Query
+abstract class AbstractFilterableQuery extends Query
 {
     use HasFilters;
 

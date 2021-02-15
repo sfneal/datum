@@ -12,7 +12,7 @@ trait PeopleBuilder
      *
      * @return Builder
      */
-    public function builder(): Builder
+    protected function builder(): Builder
     {
         return People::query();
     }

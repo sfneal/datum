@@ -78,3 +78,7 @@ All notable changes to `datum` will be documented in this file
 
 ## 0.10.2 - 2021-02-12
 - fix visibility of $filter & $filters properties in AbstractFilterableQuery
+
+
+## 0.11.0 - 2021-02-15
+- refactor Query interface to abstract class in order to make builder methods protected
