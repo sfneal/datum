@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 use Sfneal\Caching\Traits\Cacheable;
 use Sfneal\Models\AbstractModel;
 
-class NextOrPreviousModelQuery implements Query
+class NextOrPreviousModelQuery extends Query
 {
     use Cacheable;
 
@@ -51,7 +51,7 @@ class NextOrPreviousModelQuery implements Query
      *
      * @return Builder
      */
-    public function builder(): Builder
+    protected function builder(): Builder
     {
         return $this->model::query();
     }

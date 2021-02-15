@@ -5,7 +5,7 @@ namespace Sfneal\Datum\Tests\Queries;
 use Sfneal\Datum\Tests\Queries\Traits\PeopleBuilder;
 use Sfneal\Queries\Query;
 
-class PeopleCountQuery implements Query
+class PeopleCountQuery extends Query
 {
     use PeopleBuilder;
 

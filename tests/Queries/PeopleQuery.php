@@ -7,7 +7,7 @@ use Sfneal\Datum\Tests\Queries\Traits\PeopleBuilder;
 use Sfneal\Queries\Query;
 use Sfneal\Queries\Traits\HasKeyParam;
 
-class PeopleQuery implements Query
+class PeopleQuery extends Query
 {
     use HasKeyParam;
     use PeopleBuilder;

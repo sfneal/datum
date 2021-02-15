@@ -6,7 +6,7 @@ use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Model;
 use Sfneal\Caching\Traits\Cacheable;
 
-class CacheModelQuery implements Query
+class CacheModelQuery extends Query
 {
     /**
      * Inherit cache methods.
@@ -53,7 +53,7 @@ class CacheModelQuery implements Query
      *
      * @return Builder
      */
-    public function builder(): Builder
+    protected function builder(): Builder
     {
         return $this->model::query();
     }
