@@ -82,3 +82,8 @@ All notable changes to `datum` will be documented in this file
 
 ## 0.11.0 - 2021-02-15
 - refactor Query interface to abstract class in order to make builder methods protected
+
+
+## 0.12.0 - 2021-02-15
+- refactor FilterDynamic to DynamicFilter
+- refactor AbstractFilterableQuery to FilterableQuery
