@@ -6,8 +6,6 @@ use Illuminate\Database\Eloquent\Builder;
 
 abstract class Query
 {
-    // todo: make builder() a protected method
-
     /**
      * Retrieve a Query builder.
      *

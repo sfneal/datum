@@ -2,9 +2,9 @@
 
 namespace Sfneal\Datum\Tests\Filters;
 
-use Sfneal\Filters\FilterDynamic;
+use Sfneal\Filters\DynamicFilter;
 
-class NameFirstFilterDynamic extends FilterDynamic
+class NameFirstDynamicFilter extends DynamicFilter
 {
     /**
      * @var string

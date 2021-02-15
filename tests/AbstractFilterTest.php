@@ -2,14 +2,14 @@
 
 namespace Sfneal\Datum\Tests;
 
-use Sfneal\Datum\Tests\Filters\NameFirstFilterDynamic;
+use Sfneal\Datum\Tests\Filters\NameFirstDynamicFilter;
 use Sfneal\Datum\Tests\Queries\PeopleQueryWithFilters;
 
 class AbstractFilterTest extends TestCase
 {
     public function test_apply_methods_exists()
     {
-        $this->assertTrue(method_exists(NameFirstFilterDynamic::class, 'apply'));
+        $this->assertTrue(method_exists(NameFirstDynamicFilter::class, 'apply'));
     }
 
     public function test_name_first_filter_single()
