@@ -87,3 +87,8 @@ All notable changes to `datum` will be documented in this file
 ## 0.12.0 - 2021-02-15
 - refactor FilterDynamic to DynamicFilter
 - refactor AbstractFilterableQuery to FilterableQuery
+
+
+## 1.0.0 - 2021-02-15
+- initial production release
+- add basic & advanced use explanations to docs
