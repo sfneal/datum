@@ -7,9 +7,9 @@ use Sfneal\Datum\Tests\Filters\GoatFilter;
 use Sfneal\Datum\Tests\Filters\MassFilter;
 use Sfneal\Datum\Tests\Filters\NealFilter;
 use Sfneal\Datum\Tests\Queries\Traits\PeopleBuilder;
-use Sfneal\Queries\AbstractFilterableQuery;
+use Sfneal\Queries\FilterableQuery;
 
-class PeopleQueryWithFilter extends AbstractFilterableQuery
+class PeopleQueryWithFilter extends FilterableQuery
 {
     use PeopleBuilder;
 

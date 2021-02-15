@@ -6,9 +6,9 @@ use Sfneal\Datum\Tests\Filters\CityFilter;
 use Sfneal\Datum\Tests\Filters\NameFirstFilterDynamic;
 use Sfneal\Datum\Tests\Filters\NameLastFilter;
 use Sfneal\Datum\Tests\Queries\Traits\PeopleBuilder;
-use Sfneal\Queries\AbstractFilterableQuery;
+use Sfneal\Queries\FilterableQuery;
 
-class PeopleQueryWithFilters extends AbstractFilterableQuery
+class PeopleQueryWithFilters extends FilterableQuery
 {
     use PeopleBuilder;
 
