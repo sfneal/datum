@@ -5,7 +5,7 @@ namespace Sfneal\Datum\Tests;
 use Sfneal\Datum\Tests\Filters\NameFirstDynamicFilter;
 use Sfneal\Datum\Tests\Queries\PeopleQueryWithFilters;
 
-class AbstractFilterTest extends TestCase
+class DynamicFilterTest extends TestCase
 {
     public function test_apply_methods_exists()
     {

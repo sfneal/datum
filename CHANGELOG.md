@@ -92,3 +92,7 @@ All notable changes to `datum` will be documented in this file
 ## 1.0.0 - 2021-02-15
 - initial production release
 - add basic & advanced use explanations to docs
+
+
+## 1.1.0 - 2021-04-06
+- fix sfneal packages version constraints to ^1.0
