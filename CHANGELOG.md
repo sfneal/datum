@@ -95,4 +95,4 @@ All notable changes to `datum` will be documented in this file
 
 
 ## 1.1.0 - 2021-04-06
-- fix sfneal package version constraints to ^1.0
+- fix sfneal packages version constraints to ^1.0
