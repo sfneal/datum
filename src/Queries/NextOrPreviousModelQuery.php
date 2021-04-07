@@ -3,7 +3,7 @@
 namespace Sfneal\Queries;
 
 use Illuminate\Database\Eloquent\Builder;
-use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Model as EloquentModel;
 use Sfneal\Caching\Traits\Cacheable;
 use Sfneal\Models\AbstractModel;
 
@@ -59,10 +59,11 @@ class NextOrPreviousModelQuery extends Query
     /**
      * Retrieve the 'next' or 'previous' Model.
      *
-     * @return Model|null
+     * @return EloquentModel|null
      */
-    public function execute(): ?Model
+    public function execute(): ?EloquentModel
     {
+        // todo: improve return type hinting
         $query = $this->model::query();
 
         // Next Model

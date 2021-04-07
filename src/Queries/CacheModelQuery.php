@@ -3,8 +3,8 @@
 namespace Sfneal\Queries;
 
 use Illuminate\Database\Eloquent\Builder;
-use Illuminate\Database\Eloquent\Model;
 use Sfneal\Caching\Traits\Cacheable;
+use Sfneal\Models\AbstractModel;
 
 class CacheModelQuery extends Query
 {
@@ -16,7 +16,7 @@ class CacheModelQuery extends Query
     /**
      * Target Model.
      *
-     * @var Model
+     * @var AbstractModel
      */
     protected $model;
 
@@ -61,7 +61,7 @@ class CacheModelQuery extends Query
     /**
      * Retrieve a Service's title.
      *
-     * @return Model|string
+     * @return AbstractModel|string
      */
     public function execute()
     {
@@ -86,7 +86,7 @@ class CacheModelQuery extends Query
      */
     public function cacheKey(): string
     {
-        $table = (new $this->model)->getTable();
+        $table = $this->model::getTableName();
         $key = "{$table}:{$this->model_key}";
 
         return $key.(is_null($this->attribute) ? '' : ":{$this->attribute}");
