@@ -4,9 +4,9 @@ namespace Sfneal\Datum\Tests\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Sfneal\Datum\Tests\Factories\PeopleFactory;
-use Sfneal\Models\AbstractModel;
+use Sfneal\Models\Model;
 
-class People extends AbstractModel
+class People extends Model
 {
     use HasFactory;
 

@@ -4,7 +4,7 @@ namespace Sfneal\Queries;
 
 use Illuminate\Database\Eloquent\Builder;
 use Sfneal\Caching\Traits\Cacheable;
-use Sfneal\Models\AbstractModel;
+use Sfneal\Models\Model;
 
 class CacheModelQuery extends Query
 {
@@ -16,7 +16,7 @@ class CacheModelQuery extends Query
     /**
      * Target Model.
      *
-     * @var AbstractModel
+     * @var Model
      */
     protected $model;
 
@@ -61,7 +61,7 @@ class CacheModelQuery extends Query
     /**
      * Retrieve a Service's title.
      *
-     * @return AbstractModel|string
+     * @return Model|string
      */
     public function execute()
     {

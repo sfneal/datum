@@ -5,7 +5,7 @@ namespace Sfneal\Queries;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Model as EloquentModel;
 use Sfneal\Caching\Traits\Cacheable;
-use Sfneal\Models\AbstractModel;
+use Sfneal\Models\Model;
 
 class NextOrPreviousModelQuery extends Query
 {
@@ -22,7 +22,7 @@ class NextOrPreviousModelQuery extends Query
     private $cache_key_string;
 
     /**
-     * @var AbstractModel|string
+     * @var Model|string
      */
     private $model;
 
@@ -34,7 +34,7 @@ class NextOrPreviousModelQuery extends Query
     /**
      * NextOrPreviousModelQuery constructor.
      *
-     * @param AbstractModel|string $model
+     * @param Model|string $model
      * @param int $model_id
      * @param bool $next
      */
