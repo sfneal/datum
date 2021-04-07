@@ -96,3 +96,9 @@ All notable changes to `datum` will be documented in this file
 
 ## 1.1.0 - 2021-04-06
 - fix sfneal packages version constraints to ^1.0
+
+
+## 1.2.0 - 2021-04-07
+- bump sfneal/models min version to v2.0
+- refactor use of Eloquent `Model` to Sfneal `AbstractModel`
+- bump sfneal/caching min version to v1.3 to avoid conflicts with sfneal/actions v2.0
