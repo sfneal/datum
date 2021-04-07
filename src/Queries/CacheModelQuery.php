@@ -3,8 +3,8 @@
 namespace Sfneal\Queries;
 
 use Illuminate\Database\Eloquent\Builder;
-use Illuminate\Database\Eloquent\Model;
 use Sfneal\Caching\Traits\Cacheable;
+use Sfneal\Models\Model;
 
 class CacheModelQuery extends Query
 {
@@ -86,7 +86,7 @@ class CacheModelQuery extends Query
      */
     public function cacheKey(): string
     {
-        $table = (new $this->model)->getTable();
+        $table = $this->model::getTableName();
         $key = "{$table}:{$this->model_key}";
 
         return $key.(is_null($this->attribute) ? '' : ":{$this->attribute}");

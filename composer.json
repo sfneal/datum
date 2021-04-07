@@ -21,8 +21,8 @@
         "php": ">=7.3",
         "illuminate/database": ">=8.2",
         "illuminate/http": "*",
-        "sfneal/caching": "^1.2",
-        "sfneal/models": "^1.0",
+        "sfneal/caching": "^1.3",
+        "sfneal/models": "^2.0",
         "sfneal/string-helpers": "^1.0"
     },
     "require-dev": {
