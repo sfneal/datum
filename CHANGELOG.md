@@ -102,3 +102,9 @@ All notable changes to `datum` will be documented in this file
 - bump sfneal/models min version to v2.0
 - refactor use of Eloquent `Model` to Sfneal `AbstractModel`
 - bump sfneal/caching min version to v1.3 to avoid conflicts with sfneal/actions v2.0
+
+
+## 1.3.0 - 2021-04-08
+- optimize Travis CI config & enable code coverage uploading to Scrutinizer
+- make `HasFilter` & `DoesntHaveFilter` for dynamically adding relationship scopes to queries
+- bump sfneal/models min version
