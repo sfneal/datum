@@ -105,6 +105,6 @@ All notable changes to `datum` will be documented in this file
 
 
 ## 1.3.0 - 2021-04-08
-- optimize Travis CI config & enable code coverage uploading
+- optimize Travis CI config & enable code coverage uploading to Scrutinizer
 - make `HasFilter` & `DoesntHaveFilter` for dynamically adding relationship scopes to queries
 - bump sfneal/models min version
