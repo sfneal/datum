@@ -1,8 +1,6 @@
 <?php
 
-
 namespace Sfneal\Filters;
-
 
 use Illuminate\Database\Eloquent\Builder;
 
