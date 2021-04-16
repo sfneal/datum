@@ -2,6 +2,7 @@
 
 namespace Sfneal\Queries\Traits;
 
+// todo: add tests
 trait HasRelationships
 {
     /**
