@@ -112,3 +112,7 @@ All notable changes to `datum` will be documented in this file
 
 ## 1.3.1 - 2021-04-19
 - reformat `HasRelationships` traits phpdocs
+
+
+## 1.4.0 - 2021-04-19
+- make `RandomModelAttributeQuery` for retrieving a random model attribute in test suites
