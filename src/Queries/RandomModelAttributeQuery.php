@@ -49,6 +49,7 @@ class RandomModelAttributeQuery extends Query
     public function execute()
     {
         return $this->builder()
+            ->distinct()
             ->get($this->attribute)
             ->shuffle()
             ->first()
