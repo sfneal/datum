@@ -3,7 +3,6 @@
 namespace Sfneal\Queries\Traits;
 
 // todo: add tests with relationship
-use Illuminate\Database\Eloquent\Builder;
 
 trait HasRelationships
 {
@@ -13,7 +12,7 @@ trait HasRelationships
     protected $relationships = [];
 
     /**
-     * Scope Plan search results to only plans that are 'public'.
+     * Dynamically eager load model relationships.
      *
      * @param array $relationships
      * @return $this
@@ -23,28 +22,5 @@ trait HasRelationships
         $this->relationships = $relationships;
 
         return $this;
-    }
-
-    /**
-     * Retrieve a Query builder.
-     *
-     * @return Builder
-     */
-    abstract protected function newBuilder(): Builder;
-
-    /**
-     * Retrieve a Query builder.
-     *
-     * @return Builder
-     */
-    protected function builder(): Builder
-    {
-        $builder = $this->newBuilder();
-
-        if ($this->relationships) {
-            $builder->with($this->relationships);
-        }
-
-        return $builder;
     }
 }

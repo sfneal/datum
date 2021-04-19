@@ -110,5 +110,5 @@ All notable changes to `datum` will be documented in this file
 - bump sfneal/models min version
 
 
-## 1.4.0 - 2021-04-19
-- optimize `HasRelationships` trait for dynamically eager loading relationships in a model query
+## 1.3.1 - 2021-04-19
+- reformat `HasRelationships` traits phpdocs
