@@ -20,15 +20,22 @@ class RandomModelAttributeQuery extends Query
     private $attribute;
 
     /**
+     * @var int
+     */
+    private $take;
+
+    /**
      * RandomModelAttributeQuery constructor.
      *
      * @param string $modelClass
      * @param string $attribute
+     * @param int $take
      */
-    public function __construct(string $modelClass, string $attribute)
+    public function __construct(string $modelClass, string $attribute, int $take = 1)
     {
         $this->modelClass = $modelClass;
         $this->attribute = $attribute;
+        $this->take = $take;
     }
 
     /**
@@ -48,11 +55,20 @@ class RandomModelAttributeQuery extends Query
      */
     public function execute()
     {
-        return $this->builder()
+        $attributes = $this->builder()
             ->distinct()
             ->get($this->attribute)
             ->shuffle()
-            ->first()
-            ->{$this->attribute};
+            ->take($this->take)
+            ->pluck($this->attribute);
+
+        // Return a single attribute
+        if ($attributes->count() == 1) {
+            return $attributes->first();
+        }
+        // Return an array of attributes if more than '1' is being taken
+        else {
+            return $attributes->toArray();
+        }
     }
 }

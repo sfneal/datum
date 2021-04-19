@@ -116,3 +116,7 @@ All notable changes to `datum` will be documented in this file
 
 ## 1.4.0 - 2021-04-19
 - make `RandomModelAttributeQuery` for retrieving a random model attribute in test suites
+
+
+## 1.4.1 - 2021-04-19
+- add ability to retrieve more than one attribute using `RandomModelAttributeQuery`
