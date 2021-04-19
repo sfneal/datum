@@ -108,3 +108,7 @@ All notable changes to `datum` will be documented in this file
 - optimize Travis CI config & enable code coverage uploading to Scrutinizer
 - make `HasFilter` & `DoesntHaveFilter` for dynamically adding relationship scopes to queries
 - bump sfneal/models min version
+
+
+## 1.3.1 - 2021-04-19
+- reformat `HasRelationships` traits phpdocs

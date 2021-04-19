@@ -2,6 +2,8 @@
 
 namespace Sfneal\Queries\Traits;
 
+// todo: add tests with relationship
+
 trait HasRelationships
 {
     /**
@@ -10,7 +12,7 @@ trait HasRelationships
     protected $relationships = [];
 
     /**
-     * Scope Plan search results to only plans that are 'public'.
+     * Dynamically eager load model relationships.
      *
      * @param array $relationships
      * @return $this
