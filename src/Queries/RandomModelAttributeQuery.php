@@ -1,8 +1,6 @@
 <?php
 
-
 namespace Sfneal\Queries;
-
 
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Model;
