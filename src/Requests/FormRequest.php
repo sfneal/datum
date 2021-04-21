@@ -1,6 +1,5 @@
 <?php
 
-
 namespace Sfneal\Requests;
 
 use Illuminate\Foundation\Http\FormRequest as IlluminateFormRequest;
