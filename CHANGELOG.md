@@ -120,3 +120,7 @@ All notable changes to `datum` will be documented in this file
 
 ## 1.4.1 - 2021-04-19
 - add ability to retrieve more than one attribute using `RandomModelAttributeQuery`
+
+
+## 1.5.0 - 2021-04-21
+- make 'Sfneal\Requests' namespace & abstract `FormRequest` class
