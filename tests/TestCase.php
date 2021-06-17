@@ -4,29 +4,28 @@ namespace Sfneal\Datum\Tests;
 
 use Illuminate\Foundation\Application;
 use Illuminate\Foundation\Testing\RefreshDatabase;
-use Lunaweb\RedisMock\Providers\RedisMockServiceProvider;
 use Orchestra\Testbench\TestCase as OrchestraTestCase;
-use Sfneal\Datum\Tests\Models\People;
-use Sfneal\Datum\Tests\Providers\TestingServiceProvider;
-use Sfneal\Helpers\Redis\Providers\RedisHelpersServiceProvider;
+use Sfneal\Address\Models\Address;
+use Sfneal\Address\Providers\AddressServiceProvider;
 use Sfneal\Helpers\Redis\RedisCache;
+use Sfneal\Testing\Models\People;
+use Sfneal\Testing\Providers\MockModelsServiceProvider;
 
 class TestCase extends OrchestraTestCase
 {
     use RefreshDatabase;
 
     /**
-     * Register package service providers.
+     * Register package service providers®.
      *
      * @param Application $app
-     * @return array|string
+     * @return array
      */
     protected function getPackageProviders($app)
     {
         return [
-            RedisHelpersServiceProvider::class,
-            RedisMockServiceProvider::class,
-            TestingServiceProvider::class,
+            MockModelsServiceProvider::class,
+            AddressServiceProvider::class,
         ];
     }
 
@@ -38,9 +37,13 @@ class TestCase extends OrchestraTestCase
      */
     protected function getEnvironmentSetUp($app)
     {
-        include_once __DIR__.'/migrations/create_people_table.php.stub';
-
+        // Migrate 'people' table
+        include_once __DIR__.'/../vendor/sfneal/mock-models/database/migrations/create_people_table.php.stub';
         (new \CreatePeopleTable())->up();
+
+        // Migrate address table
+        include_once __DIR__.'/../vendor/sfneal/address/database/migrations/create_address_table.php.stub';
+        (new \CreateAddressTable())->up();
     }
 
     /**
@@ -55,6 +58,7 @@ class TestCase extends OrchestraTestCase
         // Create model factories
         People::factory()
             ->count(20)
+            ->has(Address::factory())
             ->create();
 
         // Add custom factories
