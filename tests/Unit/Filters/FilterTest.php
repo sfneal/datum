@@ -2,7 +2,6 @@
 
 namespace Sfneal\Datum\Tests\Unit\Filters;
 
-
 use Sfneal\Datum\Tests\Assets\Filters\CityFilter;
 use Sfneal\Datum\Tests\Assets\Filters\NameLastFilter;
 use Sfneal\Datum\Tests\Assets\Queries\PeopleQueryWithFilters;

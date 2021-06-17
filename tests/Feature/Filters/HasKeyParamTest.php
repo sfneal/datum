@@ -2,7 +2,6 @@
 
 namespace Sfneal\Datum\Tests\Feature\Filters;
 
-
 use Sfneal\Datum\Tests\Assets\Queries\PeopleQuery;
 use Sfneal\Datum\Tests\TestCase;
 use Sfneal\Testing\Models\People;

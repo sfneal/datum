@@ -2,7 +2,6 @@
 
 namespace Sfneal\Datum\Tests\Unit\Queries;
 
-
 use Sfneal\Datum\Tests\Assets\Queries\PeopleQueryWithFilters;
 use Sfneal\Datum\Tests\TestCase;
 
