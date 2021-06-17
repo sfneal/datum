@@ -3,6 +3,7 @@
 namespace Sfneal\Datum\Tests\Assets\Filters;
 
 use Illuminate\Database\Eloquent\Builder;
+use Sfneal\Address\Builders\AddressBuilder;
 use Sfneal\Filters\Filter;
 
 class FranklinFilter implements Filter
@@ -16,9 +17,10 @@ class FranklinFilter implements Filter
      */
     public function apply(Builder $query, $value): Builder
     {
-        $query
-            ->where('city', '=', 'Franklin')
-            ->where('state', '=', 'MA');
+        $query->whereHas('address', function (AddressBuilder $builder) {
+            $builder->where('city', '=', 'Franklin')
+                ->where('state', '=', 'MA');
+        });
 
         return $query;
     }

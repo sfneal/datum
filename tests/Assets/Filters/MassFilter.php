@@ -3,6 +3,7 @@
 namespace Sfneal\Datum\Tests\Assets\Filters;
 
 use Illuminate\Database\Eloquent\Builder;
+use Sfneal\Address\Builders\AddressBuilder;
 use Sfneal\Filters\Filter;
 
 class MassFilter implements Filter
@@ -16,7 +17,9 @@ class MassFilter implements Filter
      */
     public function apply(Builder $query, $value): Builder
     {
-        $query->where('state', '=', 'MA');
+        $query->whereHas('address', function (AddressBuilder $builder) {
+            $builder->where('state', '=', 'MA');
+        });
 
         return $query;
     }
