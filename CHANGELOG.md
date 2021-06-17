@@ -124,3 +124,7 @@ All notable changes to `datum` will be documented in this file
 
 ## 1.5.0 - 2021-04-21
 - make 'Sfneal\Requests' namespace & abstract `FormRequest` class
+
+
+## 1.5.1 - 2021-06-17
+- optimize test suite by refactoring into 'Feature' & 'Unit' directories
