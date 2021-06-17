@@ -96,7 +96,7 @@ class TestCase extends OrchestraTestCase
                     'city' => 'Franklin',
                     'state' => 'MA',
                     'zip' => '02038',
-                ]
+                ],
             ],
             [
                 'data' => [
@@ -108,7 +108,7 @@ class TestCase extends OrchestraTestCase
                     'city' => 'Franklin',
                     'state' => 'MA',
                     'zip' => '02038',
-                ]
+                ],
             ],
             [
                 'data' => [
@@ -120,7 +120,7 @@ class TestCase extends OrchestraTestCase
                     'city' => 'Brookline',
                     'state' => 'MA',
                     'zip' => '02445',
-                ]
+                ],
             ],
             [
                 'data' => [
@@ -132,7 +132,7 @@ class TestCase extends OrchestraTestCase
                     'city' => 'Charlotte',
                     'state' => 'NC',
                     'zip' => '12345',
-                ]
+                ],
             ],
             [
                 'data' => [
@@ -144,7 +144,7 @@ class TestCase extends OrchestraTestCase
                     'city' => 'Albuquerque',
                     'state' => 'NM',
                     'zip' => '04523',
-                ]
+                ],
             ],
             [
                 'data' => [
@@ -156,7 +156,7 @@ class TestCase extends OrchestraTestCase
                     'city' => 'Franklin',
                     'state' => 'MA',
                     'zip' => '02038',
-                ]
+                ],
             ],
         ];
     }
