@@ -128,3 +128,7 @@ All notable changes to `datum` will be documented in this file
 
 ## 1.5.1 - 2021-06-17
 - optimize test suite by refactoring into 'Feature' & 'Unit' directories
+ 
+ 
+## 1.5.2 - 2021-08-18
+- add explicit sfneal/address dev requirement because it was removed as a dependency of sfneal/models
