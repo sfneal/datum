@@ -132,3 +132,8 @@ All notable changes to `datum` will be documented in this file
  
 ## 1.5.2 - 2021-08-18
 - add explicit sfneal/address dev requirement because it was removed as a dependency of sfneal/models
+
+
+## 1.5.3 - 2021-08-31
+- add support for sfneal/caching v2.0
+- fix use of '#' cache key id suffix delimiter with ':'
