@@ -110,6 +110,6 @@ class NextOrPreviousModelQuery extends Query
      */
     public function cacheKey(): string
     {
-        return $this->model::getTableName().":{$this->cache_key_string}:#{$this->model_id}";
+        return $this->model::getTableName().":{$this->cache_key_string}:{$this->model_id}";
     }
 }
