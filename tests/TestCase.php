@@ -4,11 +4,11 @@ namespace Sfneal\Datum\Tests;
 
 use Illuminate\Foundation\Application;
 use Illuminate\Foundation\Testing\RefreshDatabase;
+use Illuminate\Support\Facades\Cache;
 use Orchestra\Testbench\TestCase as OrchestraTestCase;
 use Sfneal\Address\Models\Address;
 use Sfneal\Address\Providers\AddressServiceProvider;
 use Sfneal\Helpers\Redis\Providers\RedisHelpersServiceProvider;
-use Sfneal\Helpers\Redis\RedisCache;
 use Sfneal\Testing\Models\People;
 use Sfneal\Testing\Providers\MockModelsServiceProvider;
 
@@ -74,7 +74,7 @@ class TestCase extends OrchestraTestCase
      */
     protected function tearDown(): void
     {
-        RedisCache::flush();
+        Cache::flush();
         parent::tearDown();
     }
 
