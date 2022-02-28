@@ -137,3 +137,8 @@ All notable changes to `datum` will be documented in this file
 ## 1.5.3 - 2021-08-31
 - add support for sfneal/caching v2.0
 - fix use of '#' cache key id suffix delimiter with ':'
+
+
+## 2.0.0 - 2022-02-28
+- add support for running test suite inside Docker containers & using GitHub actions
+- bump composer package constraints to support latest versions

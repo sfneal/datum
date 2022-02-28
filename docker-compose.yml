@@ -1,0 +1,39 @@
+version: '3'
+
+services:
+    datum:
+        build:
+            context: .
+            dockerfile: Dockerfile
+        image: "stephenneal/datum:${TAG}"
+        env_file: .env.docker
+        container_name: datum
+        tty: true
+        volumes:
+            - datum:/var/www
+        depends_on:
+            - datum-cache
+        networks:
+            - datum-network
+
+    datum-cache:
+        container_name: datum-cache
+        image: redis:6-alpine
+        command: ["redis-server", "--appendonly yes", "--port 9576"]
+        ports:
+            - "9576:9576"
+        volumes:
+            - datum-cache:/data
+        networks:
+            - datum-network
+
+
+# Networks
+networks:
+    datum-network:
+        driver: bridge
+
+# Volumes
+volumes:
+    datum:
+    datum-cache:
