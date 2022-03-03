@@ -34,9 +34,9 @@ class NextOrPreviousModelQuery extends Query
     /**
      * NextOrPreviousModelQuery constructor.
      *
-     * @param Model|string $model
-     * @param int $model_id
-     * @param bool $next
+     * @param  Model|string  $model
+     * @param  int  $model_id
+     * @param  bool  $next
      */
     public function __construct($model, int $model_id, bool $next = true)
     {
