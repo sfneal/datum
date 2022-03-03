@@ -9,9 +9,9 @@ trait ParamGetter
     /**
      * Retrieve a parameter that can be set by a variable or request input.
      *
-     * @param Request|null $request
-     * @param array $parameters
-     * @param null $key
+     * @param  Request|null  $request
+     * @param  array  $parameters
+     * @param  null  $key
      * @return mixed|null
      */
     private static function getParam(Request $request = null, array $parameters = [], $key = null)

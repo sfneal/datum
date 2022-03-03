@@ -37,9 +37,9 @@ class CacheModelQuery extends Query
     /**
      * QueryCacheAttribute constructor.
      *
-     * @param int $model_key
-     * @param string|null $model
-     * @param string|null $attribute
+     * @param  int  $model_key
+     * @param  string|null  $model
+     * @param  string|null  $attribute
      */
     public function __construct(int $model_key, string $model = null, string $attribute = null)
     {
