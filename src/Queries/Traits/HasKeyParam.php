@@ -17,8 +17,8 @@ trait HasKeyParam
     /**
      * ArticleQuery constructor.
      *
-     * @param int|array|null $modelKey
-     * @param mixed ...$params
+     * @param  int|array|null  $modelKey
+     * @param  mixed  ...$params
      */
     public function __construct($modelKey = null, ...$params)
     {

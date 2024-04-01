@@ -11,9 +11,8 @@ class DoesntHaveFilter extends HasFilter implements Filter
      *
      *  - useful for checkbox search inputs corresponding to relationship names
      *
-     * @param Builder $query
-     * @param array|mixed $value
-     *
+     * @param  Builder  $query
+     * @param  array|mixed  $value
      * @return Builder $builder
      */
     public function apply(Builder $query, $value): Builder

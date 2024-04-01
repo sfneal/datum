@@ -23,8 +23,8 @@ abstract class DynamicFilter implements Filter
      *  - if a 'string' value is found then a single value where clause is added
      *  - if a 'array' value is found then a whereIn clause is added
      *
-     * @param Builder $query
-     * @param mixed $value
+     * @param  Builder  $query
+     * @param  mixed  $value
      * @return Builder $query
      */
     public function apply(Builder $query, $value = null)
@@ -54,7 +54,7 @@ abstract class DynamicFilter implements Filter
     /**
      * Add a where clause that searches for a single value.
      *
-     * @param string $id
+     * @param  string  $id
      * @return Builder
      */
     protected function stringValueClause($id)
@@ -67,7 +67,7 @@ abstract class DynamicFilter implements Filter
     /**
      * Add a where clause that searches for an array of values.
      *
-     * @param array $ids
+     * @param  array  $ids
      * @return Builder
      */
     protected function arrayValueClause(array $ids)
@@ -80,7 +80,7 @@ abstract class DynamicFilter implements Filter
     /**
      * Set the Query Builder property.
      *
-     * @param Builder $query
+     * @param  Builder  $query
      */
     private function setQuery(Builder $query): void
     {

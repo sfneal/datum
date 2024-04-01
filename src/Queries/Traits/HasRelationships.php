@@ -14,7 +14,7 @@ trait HasRelationships
     /**
      * Dynamically eager load model relationships.
      *
-     * @param array $relationships
+     * @param  array  $relationships
      * @return $this
      */
     public function withRelationships(array $relationships = []): self

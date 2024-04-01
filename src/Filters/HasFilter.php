@@ -12,8 +12,8 @@ class HasFilter implements Filter
      *
      *  - useful for checkbox search inputs corresponding to relationship names
      *
-     * @param Builder $query
-     * @param array|mixed $value
+     * @param  Builder  $query
+     * @param  array|mixed  $value
      * @return Builder $builder
      */
     public function apply(Builder $query, $value): Builder
@@ -24,9 +24,9 @@ class HasFilter implements Filter
     /**
      * Apply the Filter to the Query.
      *
-     * @param Builder $query
-     * @param array $value
-     * @param bool $has
+     * @param  Builder  $query
+     * @param  array  $value
+     * @param  bool  $has
      * @return Builder
      */
     protected static function execute(Builder $query, array $value, bool $has = true): Builder
