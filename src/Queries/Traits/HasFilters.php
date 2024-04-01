@@ -47,10 +47,8 @@ trait HasFilters
     {
         // Wrap scopes
         $builder->where(function (Builder $query) use ($filters) {
-
             // Check every parameter to see if there's a corresponding Filter class
             foreach ($filters ?? $this->filters as $filterName => $value) {
-
                 // Apply Filter class if it exists and is a filterable attribute
                 $query = self::applyFilter($query, $filterName, $value);
             }
@@ -99,7 +97,7 @@ trait HasFilters
     /**
      * Create a filter decorator by manipulating filter name to find the corresponding filter class.
      *
-     * @param $name
+     * @param  $name
      * @return null|string|Filter
      */
     private function getFilterClass($name)
@@ -113,7 +111,7 @@ trait HasFilters
     /**
      * Check if the filters array is valid for querying.
      *
-     * @param $filters
+     * @param  $filters
      * @return bool
      */
     private static function isValidFiltersArray($filters)
