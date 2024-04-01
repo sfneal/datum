@@ -21,8 +21,8 @@
         "php": "^8.0",
         "illuminate/database": ">=8.2",
         "illuminate/http": "*",
-        "sfneal/caching": "^1.3|^2.0|^3.0",
-        "sfneal/models": "^2.2",
+        "sfneal/caching": "^3.0",
+        "sfneal/models": "^3.0",
         "sfneal/string-helpers": "^1.0"
     },
     "require-dev": {
@@ -30,8 +30,8 @@
         "orchestra/testbench": "^7.40|^8.0|9.0",
         "phpunit/phpunit": "^9.6|^10.0|^11.0",
         "scrutinizer/ocular": "^1.8",
-        "sfneal/mock-models": ">=0.6",
-        "sfneal/address": "^1.2"
+        "sfneal/mock-models": ">=0.11",
+        "sfneal/address": "^2.0"
     },
     "autoload": {
         "psr-4": {
