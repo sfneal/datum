@@ -25,9 +25,9 @@ class RandomModelAttributeQuery extends Query
     /**
      * RandomModelAttributeQuery constructor.
      *
-     * @param string $modelClass
-     * @param string $attribute
-     * @param int $take
+     * @param  string  $modelClass
+     * @param  string  $attribute
+     * @param  int  $take
      */
     public function __construct(string $modelClass, string $attribute, int $take = 1)
     {

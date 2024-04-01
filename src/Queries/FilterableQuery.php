@@ -25,7 +25,7 @@ abstract class FilterableQuery extends Query
     /**
      * QueryWithFilters constructor.
      *
-     * @param array|string $filters
+     * @param  array|string  $filters
      */
     public function __construct($filters)
     {
@@ -62,13 +62,12 @@ abstract class FilterableQuery extends Query
     /**
      * Parse filters and remove all keys that are not found in the declared attributes_filters.
      *
-     * @param array $filters filters passed from search form
+     * @param  array  $filters  filters passed from search form
      * @return array
      */
     private function filterFilters(array $filters): array
     {
         return array_filter($filters, function ($value, $filter) {
-
             // Return true if the filter is a filterable attribute
             return in_array($filter, array_keys($this->queryFilters())) && ! is_null($value);
         }, ARRAY_FILTER_USE_BOTH);

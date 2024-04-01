@@ -19,8 +19,8 @@ trait HasFilters
     /**
      * Apply pre-defined Filters to a Query.
      *
-     * @param Builder $builder
-     * @param null $filters
+     * @param  Builder  $builder
+     * @param  null  $filters
      * @return Builder
      */
     protected function filterQuery(Builder $builder, $filters = null)
@@ -39,18 +39,16 @@ trait HasFilters
     /**
      * Apply Filter decorators to the query if both the parameter is given and the Filter class exists.
      *
-     * @param Builder $builder
-     * @param array|null $filters
+     * @param  Builder  $builder
+     * @param  array|null  $filters
      * @return Builder
      */
     private function applyFilters(Builder $builder, array $filters = null)
     {
         // Wrap scopes
         $builder->where(function (Builder $query) use ($filters) {
-
             // Check every parameter to see if there's a corresponding Filter class
             foreach ($filters ?? $this->filters as $filterName => $value) {
-
                 // Apply Filter class if it exists and is a filterable attribute
                 $query = self::applyFilter($query, $filterName, $value);
             }
@@ -62,10 +60,10 @@ trait HasFilters
     /**
      * Apply a filter to a Query if the Filter class is valid.
      *
-     * @param Builder $query
-     * @param string $filterName
-     * @param mixed $filterValue
-     * @param Filter $decorator
+     * @param  Builder  $query
+     * @param  string  $filterName
+     * @param  mixed  $filterValue
+     * @param  Filter  $decorator
      * @return Builder
      */
     private function applyFilter(Builder $query, string $filterName, $filterValue = null, $decorator = null)
@@ -87,8 +85,8 @@ trait HasFilters
      * Check that the Filter class exists or the $decorator is an object.
      * Then check that the attribute is declared as filterable.
      *
-     * @param string|mixed $decorator
-     * @param string $attribute
+     * @param  string|mixed  $decorator
+     * @param  string  $attribute
      * @return bool
      */
     private function isValidFilterClass($decorator, string $attribute): bool
@@ -99,7 +97,7 @@ trait HasFilters
     /**
      * Create a filter decorator by manipulating filter name to find the corresponding filter class.
      *
-     * @param $name
+     * @param  $name
      * @return null|string|Filter
      */
     private function getFilterClass($name)
@@ -113,7 +111,7 @@ trait HasFilters
     /**
      * Check if the filters array is valid for querying.
      *
-     * @param $filters
+     * @param  $filters
      * @return bool
      */
     private static function isValidFiltersArray($filters)
@@ -124,7 +122,7 @@ trait HasFilters
     /**
      * Determine if a particular filter is in the array of filterable attributes.
      *
-     * @param string $name
+     * @param  string  $name
      * @return bool
      */
     private function isFilterableAttribute(string $name)
@@ -139,7 +137,7 @@ trait HasFilters
     /**
      * Retrieve a Filter that corresponds to an attribute.
      *
-     * @param string $name
+     * @param  string  $name
      * @return string
      */
     private function getAttributeFilter(string $name): string
