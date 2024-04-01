@@ -142,3 +142,7 @@ All notable changes to `datum` will be documented in this file
 ## 1.6.0 - 2022-02-28
 - add support for running test suite inside Docker containers & using GitHub actions
 - bump composer package constraints to support latest versions
+
+
+## 2.0.0 - 2024-04-01
+- cut support for PHP 7
