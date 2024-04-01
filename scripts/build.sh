@@ -37,7 +37,8 @@ export TAG
 
 # Build the image
 echo "Building image: stephenneal/datum:${TAG}"
-docker build -t stephenneal/datum:"${TAG}" \
+echo "Building image: stephenneal/datum:${TAG}"
+docker build -t stephenneal/datum:"${TAG}" -t stephenneal/datum:latest \
     --build-arg php_composer_tag="${PHP_COMPOSER_TAG}" \
     --build-arg composer_flags="${COMPOSER_FLAGS}" \
      .

@@ -5,7 +5,7 @@ services:
         build:
             context: .
             dockerfile: Dockerfile
-        image: "stephenneal/datum:${TAG}"
+        image: "stephenneal/datum:latest"
         env_file: .env.docker
         container_name: datum
         tty: true
