@@ -148,3 +148,7 @@ All notable changes to `datum` will be documented in this file
 - cut support for PHP 7
 - add support for PHP 8.2 & 8.3
 - bump composer package constraints to latest versions
+
+
+## 2.0.1 - 2024-04-25
+- add new GitHub actions to the CI pipline
