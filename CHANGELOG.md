@@ -152,3 +152,4 @@ All notable changes to `datum` will be documented in this file
 
 ## 2.0.1 - 2024-04-25
 - add new GitHub actions to the CI pipline
+- add support for sfneal/caching v4.0
