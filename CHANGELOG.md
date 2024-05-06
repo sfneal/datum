@@ -153,3 +153,8 @@ All notable changes to `datum` will be documented in this file
 ## 2.0.1 - 2024-04-25
 - add new GitHub actions to the CI pipline
 - add support for sfneal/caching v4.0
+
+
+## 2.0.2 - 2024-04-25
+- bump sfneal/models to v4
+- bump sfneal/address requirement from ^2.0 to ^2.0 || ^3.0

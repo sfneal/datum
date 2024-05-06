@@ -22,7 +22,7 @@
         "illuminate/database": ">=8.2",
         "illuminate/http": "*",
         "sfneal/caching": "^3.0|^4.0",
-        "sfneal/models": "^3.0",
+        "sfneal/models": "^4.0",
         "sfneal/string-helpers": "^1.0"
     },
     "require-dev": {
@@ -31,7 +31,7 @@
         "phpunit/phpunit": "^9.6|^10.0|^11.0",
         "scrutinizer/ocular": "^1.8",
         "sfneal/mock-models": ">=0.11",
-        "sfneal/address": "^2.0"
+        "sfneal/address": "^2.0|^3.0"
     },
     "autoload": {
         "psr-4": {
