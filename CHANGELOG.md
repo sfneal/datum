@@ -155,6 +155,6 @@ All notable changes to `datum` will be documented in this file
 - add support for sfneal/caching v4.0
 
 
-## 2.0.2 - 2024-04-25
+## 2.0.2 - 2024-05-06
 - bump sfneal/models to v4
 - bump sfneal/address requirement from ^2.0 to ^2.0 || ^3.0
