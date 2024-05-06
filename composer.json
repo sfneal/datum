@@ -22,7 +22,7 @@
         "illuminate/database": ">=8.2",
         "illuminate/http": "*",
         "sfneal/caching": "^3.0|^4.0",
-        "sfneal/models": "^4.0",
+        "sfneal/models": "^3.0 || ^4.0",
         "sfneal/string-helpers": "^1.0"
     },
     "require-dev": {
