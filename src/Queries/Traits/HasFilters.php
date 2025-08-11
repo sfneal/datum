@@ -43,7 +43,7 @@ trait HasFilters
      * @param  array|null  $filters
      * @return Builder
      */
-    private function applyFilters(Builder $builder, array $filters = null)
+    private function applyFilters(Builder $builder, ?array $filters = null)
     {
         // Wrap scopes
         $builder->where(function (Builder $query) use ($filters) {

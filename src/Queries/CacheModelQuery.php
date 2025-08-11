@@ -41,7 +41,7 @@ class CacheModelQuery extends Query
      * @param  string|null  $model
      * @param  string|null  $attribute
      */
-    public function __construct(int $model_key, string $model = null, string $attribute = null)
+    public function __construct(int $model_key, ?string $model = null, ?string $attribute = null)
     {
         $this->model_key = $model_key;
         $this->model = $this->model ?? $model;

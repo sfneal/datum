@@ -14,7 +14,7 @@ trait ParamGetter
      * @param  null  $key
      * @return mixed|null
      */
-    private static function getParam(Request $request = null, array $parameters = [], $key = null)
+    private static function getParam(?Request $request = null, array $parameters = [], $key = null)
     {
         // Parameter is specified
         if (array_key_exists($key, $parameters)) {
